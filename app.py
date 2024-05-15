@@ -21,7 +21,7 @@ mongo = PyMongo(app)
 @app.route("/get_reviews")
 def get_reviews():
     reviews = mongo.db.reviews.find()
-    print("Reviews: ", reviews)
+    # print("Reviews: ", reviews)
     return render_template("reviews.html", reviews=reviews)
 
 if __name__ == "__main__":
