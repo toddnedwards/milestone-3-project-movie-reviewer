@@ -22,7 +22,7 @@
               <ul class="right hide-on-med-and-down">
                 <li><a href="{{ url_for('index') }}">Home</a></li>
                 {% if session.user %}
-                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">My Account</a></li>
                     <li><a href="{{ url_for('index') }}">Reviews</a></li>
                     {% if session.user|lower == "admin"|lower %}
                         <li><a href="#">Leave A Review</a></li>
@@ -30,7 +30,7 @@
                     <li><a href="#">Log Out</a></li>
                 {% else %}
                     <li><a href="{{ url_for('login') }}">Log In</a></li>
-                    <li><a href="#">Register</a></li>
+                    <li><a href="{{ url_for('register') }}">Register</a></li>
                 {% endif %}
               </ul>
             </div>
@@ -40,7 +40,7 @@
           <ul class="sidenav" id="mobile-demo">
             <li><a href="{{ url_for('index') }}">Home</a></li>
                 {% if session.user %}
-                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">My Account</a></li>
                     <li><a href="{{ url_for('reviews') }}">Reviews</a></li>
                     {% if session.user|lower == "admin"|lower %}
                         <li><a href="#">Leave A Review</a></li>
@@ -48,7 +48,7 @@
                     <li><a href="#">Log Out</a></li>
                 {% else %}
                     <li><a href="{{ url_for('index') }}">Log In</a></li>
-                    <li><a href="#">Register</a></li>
+                    <li><a href="{{ url_for('register') }}">Register</a></li>
                 {% endif %}
           </ul>
     </header>
