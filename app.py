@@ -36,7 +36,7 @@ def get_reviews():
 def register():
     if request.method == "POST":
         # check database to see if username already exists
-        existing_user = mongo.db.find_one(
+        existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
         if existing_user:
@@ -54,8 +54,13 @@ def register():
         flash("Registration Successful")
         return redirect(url_for(
             "my_account", username=session["user"])) 
-        return render_template("register.html")
+    return render_template("register.html")
 
+
+# My Account Page
+@app.route("/my_account")
+def my_account():
+    return render_template("my_account.html")
 
 
 # Login Page
