@@ -17,19 +17,19 @@
         <!-- top navbar -->
         <nav class="nav-extended black">
             <div class="nav-wrapper">
-              <a href="{ url_for(index)}" class="brand-logo">Movie Reviewers</a>
+              <a href="{{ url_for('index') }}" class="brand-logo">Movie Reviewers</a>
               <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
               <ul class="right hide-on-med-and-down">
-                <li><a href="sass.html">Home</a></li>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
                 {% if session.user %}
                     <li><a href="#">Profile</a></li>
-                    <li><a href="#">Reviews</a></li>
+                    <li><a href="{{ url_for('index') }}">Reviews</a></li>
                     {% if session.user|lower == "admin"|lower %}
                         <li><a href="#">Leave A Review</a></li>
                     {% endif %}
                     <li><a href="#">Log Out</a></li>
                 {% else %}
-                    <li><a href="#">Log In</a></li>
+                    <li><a href="{{ url_for('login') }}">Log In</a></li>
                     <li><a href="#">Register</a></li>
                 {% endif %}
               </ul>
@@ -38,16 +38,16 @@
         
         <!-- mobile navbar -->
           <ul class="sidenav" id="mobile-demo">
-            <li><a href="sass.html">Home</a></li>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
                 {% if session.user %}
                     <li><a href="#">Profile</a></li>
-                    <li><a href="#">Reviews</a></li>
+                    <li><a href="{{ url_for('reviews') }}">Reviews</a></li>
                     {% if session.user|lower == "admin"|lower %}
                         <li><a href="#">Leave A Review</a></li>
                     {% endif %}
                     <li><a href="#">Log Out</a></li>
                 {% else %}
-                    <li><a href="#">Log In</a></li>
+                    <li><a href="{{ url_for('index') }}">Log In</a></li>
                     <li><a href="#">Register</a></li>
                 {% endif %}
           </ul>
