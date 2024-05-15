@@ -37,3 +37,6 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 ---
 
 Happy coding!
+
+
+thanks to Sarah for helping with mongo db connection issues I had
