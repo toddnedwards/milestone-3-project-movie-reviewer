@@ -1,7 +1,21 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3>home page</h3>
+    <!-- Top Page Headings -->
+    <h1 class="center-align">Welcome To Movie Reviewers</h1>
+    <h2 class="center-align red-text text-darken-2">Home of the greatest movie reviews</h2>
+
+    <p class="center-align">Get Started Now!</p>
+    <!-- Register Button -->
+    <div class="row">
+        <div class="center-align">
+            <a id="register-btn" class="waves-effect waves-light red darken-4 btn-large center-align md-2 offset-md-5">
+                <i class="fa-solid fa-film"></i> Register </a>
+        </div>
+    </div>
+
+    <!-- Review Examples -->
+
 
     {% for review in reviews %}<br>
         {{ review.movie_title }}<br>
