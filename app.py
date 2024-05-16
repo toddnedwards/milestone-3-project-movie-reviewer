@@ -22,8 +22,8 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/index")
 def index():
-    return render_template("index.html")
-
+    reviews = mongo.db.reviews.find({})
+    return render_template('index.html', reviews=reviews)
 
 # Reviews Page
 @app.route("/get_reviews")
@@ -54,14 +54,31 @@ def register():
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful")
         return redirect(url_for(
-            "my_account", username=session["user"])) 
+            "create_review", username=session["user"])) 
     return render_template("register.html")
 
 
-# My Account Page
-@app.route("/my_account")
-def my_account():
-    return render_template("my_account.html")
+@app.route("/create_review", methods=["GET", "POST"])
+def create_review():
+    if request.method == "POST":
+        # Assuming 'current_user_id' is available in the session or another method to identify the current user
+        current_user_id = session.get("user_id")
+        
+        review_data = {
+            "movie_title": request.form.get("movie_title"),
+            "genre": request.form.get("genre"),
+            "subtitle": request.form.get("subtitle"),
+            "review": request.form.get("review"),
+            "username": session["user"]
+        }
+        # Insert the review into the reviews collection
+        mongo.db.reviews.insert_one(review_data)
+        
+        flash("Review Successfully Added")
+        return redirect(url_for("reviews"))
+        
+    genres = mongo.db.genres.find()  # Assuming 'genres' is the collection name
+    return render_template("create_review.html", genres=genres)
 
 
 # Login Page
