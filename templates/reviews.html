@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h1 class="center-align">Welcome To Movie Reviewers</h1>
+    <h1 class="center-align">Movie Reviews</h1>
+    <h3 class="center-align red-text text-darken-2">See The Best Movies Ever created below. and the worst!</h3>
+
 
     {% for review in reviews %}<br>
         {{ review.movie_title }}<br>
