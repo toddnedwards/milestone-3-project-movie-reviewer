@@ -25,6 +25,7 @@ def index():
     reviews = mongo.db.reviews.find({})
     return render_template('index.html', reviews=reviews)
 
+
 # Reviews Page
 @app.route("/get_reviews")
 def reviews():
@@ -57,7 +58,7 @@ def register():
             "create_review", username=session["user"])) 
     return render_template("register.html")
 
-
+# create review
 @app.route("/create_review", methods=["GET", "POST"])
 def create_review():
     if request.method == "POST":
@@ -80,6 +81,11 @@ def create_review():
     genres = mongo.db.genres.find()  # Assuming 'genres' is the collection name
     return render_template("create_review.html", genres=genres)
 
+
+#edit review
+@app.route("/edit_review", methods=["GET", "POST"])
+def edit_review():
+    return render_template("edit_review.html")
 
 # Login Page
 @app.route("/login", methods=["GET", "POST"])
@@ -108,6 +114,7 @@ def login():
             return redirect(url_for("login"))
             
     return render_template("login.html")
+
 
 @app.route("/logout")
 def logout():
