@@ -22,12 +22,12 @@
               <ul class="right hide-on-med-and-down">
                 <li><a href="{{ url_for('index') }}">Home</a></li>
                 {% if session.user %}
-                    <li><a href="#">My Account</a></li>
-                    <li><a href="{{ url_for('index') }}">Reviews</a></li>
+                    <li><a href="{{ url_for('my_account') }}">My Account</a></li>
+                    <li><a href="{{ url_for('reviews') }}">Reviews</a></li>
                     {% if session.user|lower == "admin"|lower %}
                         <li><a href="#">Leave A Review</a></li>
                     {% endif %}
-                    <li><a href="#">Log Out</a></li>
+                    <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                 {% else %}
                     <li><a href="{{ url_for('login') }}">Log In</a></li>
                     <li><a href="{{ url_for('register') }}">Register</a></li>
@@ -37,15 +37,15 @@
           </nav>
         
         <!-- mobile navbar -->
-          <ul class="sidenav" id="mobile-demo">
+          <ul class="sidenav black" id="mobile-demo">
             <li><a href="{{ url_for('index') }}">Home</a></li>
                 {% if session.user %}
-                    <li><a href="#">My Account</a></li>
+                    <li><a href="{{ url_for('my_account') }}">My Account</a></li>
                     <li><a href="{{ url_for('reviews') }}">Reviews</a></li>
                     {% if session.user|lower == "admin"|lower %}
                         <li><a href="#">Leave A Review</a></li>
                     {% endif %}
-                    <li><a href="#">Log Out</a></li>
+                    <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                 {% else %}
                     <li><a href="{{ url_for('index') }}">Log In</a></li>
                     <li><a href="{{ url_for('register') }}">Register</a></li>
@@ -64,5 +64,12 @@
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     {% block scripts %}
     {% endblock %}
+    <footer class="page-footer black">
+      <div class="footer-copyright">
+        <div class="container center-align">
+        © 2024 Movie Reviewers
+        </div>
+      </div>
+    </footer>
 </body>
 </html>
