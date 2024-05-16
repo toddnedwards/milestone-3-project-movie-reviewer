@@ -30,6 +30,10 @@ h1, h2, h3 {
     text-shadow: 8px 8px 5px rgba(0, 0, 0, 0.5);
 }
 
+.card-shadow {
+    box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.5);
+}
+
 .reviews-heading {
     font-size: 30px;
     padding-top: 20px;
