@@ -3,14 +3,21 @@
 
     <h1 class="center-align">Movie Reviews</h1>
     <h3 class="center-align red-text text-darken-2">See The Best Movies Ever created below. and the worst!</h3>
+    
+    
 
-
-    {% for review in reviews %}<br>
-        {{ review.movie_title }}<br>
-        {{ review.genre }}<br>
-        {{ review.subtitle }}<br>
-        {{ review.review }}<br>
-        {{ review.username }}<br>
-    {% endfor %}
+    <div class="row reviews-section">
+        {% for review in reviews %}
+        <div class="col s12 m3">
+            <div class="card-panel blue-grey lighten-3">
+                <h4>Movie: {{ review.movie_title }}</h4>
+                <p class="genre">Genre: {{ review.genre }}</p><br>
+                <p>{{ review.subtitle }}</p><br>
+                <p>{{ review.review }}</p><br>
+                <p>Reviewed By: {{ review.username }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 
 {% endblock %}
