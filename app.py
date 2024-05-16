@@ -17,6 +17,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
+
 # Home (index) page
 @app.route("/")
 @app.route("/index")
@@ -26,7 +27,7 @@ def index():
 
 # Reviews Page
 @app.route("/get_reviews")
-def get_reviews():
+def reviews():
     reviews = mongo.db.reviews.find()
     return render_template("reviews.html", reviews=reviews)
 
@@ -67,7 +68,7 @@ def my_account():
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
-        existing_user = mongo.db.find_one(
+        existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
         if existing_user:
@@ -91,7 +92,12 @@ def login():
             
     return render_template("login.html")
 
-
+@app.route("/logout")
+def logout():
+    # remove user from session cookies
+    flash("You have been logged out")
+    session.pop("user")
+    return redirect(url_for("login"))
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
