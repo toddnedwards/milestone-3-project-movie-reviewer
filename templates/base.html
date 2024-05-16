@@ -22,7 +22,7 @@
               <ul class="right hide-on-med-and-down">
                 <li><a href="{{ url_for('index') }}">Home</a></li>
                 {% if session.user %}
-                    <li><a href="{{ url_for('my_account') }}">My Account</a></li>
+                    <li><a href="{{ url_for('create_review') }}">Create Review</a></li>
                     <li><a href="{{ url_for('reviews') }}">Reviews</a></li>
                     {% if session.user|lower == "admin"|lower %}
                         <li><a href="#">Leave A Review</a></li>
@@ -40,7 +40,7 @@
           <ul class="sidenav black" id="mobile-demo">
             <li><a href="{{ url_for('index') }}">Home</a></li>
                 {% if session.user %}
-                    <li><a href="{{ url_for('my_account') }}">My Account</a></li>
+                    <li><a href="{{ url_for('create_review') }}">Create Review</a></li>
                     <li><a href="{{ url_for('reviews') }}">Reviews</a></li>
                     {% if session.user|lower == "admin"|lower %}
                         <li><a href="#">Leave A Review</a></li>
@@ -53,17 +53,24 @@
           </ul>
     </header>
 
+    <section>
+      <!-- flash messages -->
+      {% with messages = get_flashed_messages() %}
+          {% if messages %}
+              {% for message in messages %}
+                  <div class="row flashes md4">
+                    <h4 class="red-text text-darken-2 center-align">{{ message }}</h4>
+                  </div>
+              {% endfor %}
+          {% endif %}
+      {% endwith %}
+    </section>
+
     <main>
         {% block content %}
         {% endblock %}
     </main>
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
-    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-    {% block scripts %}
-    {% endblock %}
     <footer class="page-footer black">
       <div class="footer-copyright">
         <div class="container center-align">
@@ -71,5 +78,12 @@
         </div>
       </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    {% block scripts %}
+    {% endblock %}
+
 </body>
 </html>
