@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <!-- Top Page Headings -->
+    <!-- Top Page Headings & background image -->
 <main style="background-image: url('/static/images/background-image-cropped.jpg');
     background-size: cover;
     background-position: center;
@@ -22,19 +22,27 @@
             </div>
         </div>
     </div>
+
+    <!-- Example Reviews -->
+    
+    <div class="row white">
+        <div class="h3 reviews-heading center-align">Some of our reviews:</div>
+    
+        <div class="row reviews-section">
+            {% for review in reviews %}
+            <div class="col s12 m4">
+                <div class="card large card-panel blue-grey lighten-3">
+                    <h4>Movie: {{ review.movie_title }}</h4>
+                    <p class="genre">Genre: {{ review.genre }}</p><br>
+                    <p>{{ review.subtitle }}</p><br>
+                    <p>{{ review.review }}</p><br>
+                    <p>Reviewed By: {{ review.username }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
 </main>
-
-
-
-    <!-- Review Examples -->
-
-
-    {% for review in reviews %}<br>
-        {{ review.movie_title }}<br>
-        {{ review.genre }}<br>
-        {{ review.subtitle }}<br>
-        {{ review.review }}<br>
-        {{ review.username }}<br>
-    {% endfor %}
 
 {% endblock %}
