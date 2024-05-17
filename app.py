@@ -22,8 +22,8 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/index")
 def index():
-    reviews = mongo.db.reviews.find({}).limit(3)
-    return render_template('index.html', reviews=reviews)
+    home_reviews = mongo.db.reviews.find({}).limit(3)
+    return render_template('index.html', home_reviews=home_reviews)
 
 
 # Reviews Page
@@ -38,8 +38,6 @@ def reviews():
 # Register Page
 @app.route("/register", methods=["GET", "POST"])
 def register():
-    if 'user' not in session or not session['user']:
-        return redirect(url_for('unauthorised'))
     if request.method == "POST":
         # check database to see if username already exists
         existing_user = mongo.db.users.find_one(
@@ -87,13 +85,26 @@ def create_review():
     categories = mongo.db.categories.find().sort("genre_name", 1)
     return render_template("create_review.html", categories=categories)
 
-
 #edit review
-@app.route("/edit_review", methods=["GET", "POST"])
-def edit_review():
+@app.route("/edit_review/<review_id>", methods=["GET", "POST"])
+def edit_review(review_id):
     if 'user' not in session or not session['user']:
         return redirect(url_for('unauthorised'))
-    return render_template("edit_review.html")
+    if request.method == "POST":
+        submit = {
+            "movie_title": request.form.get("movie_title"),
+                "genre": request.form.get("genre"),
+                "subtitle": request.form.get("subtitle"),
+                "review": request.form.get("review"),
+                "rating": request.form.get("rating"),
+                "username": session["user"]
+        }
+        mongo.db.reviews.update({"_id": ObjectId(review_id)}, submit)
+        flash("Review Successfully Updated")
+
+    review = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
+    categories = mongo.db.categories.find().sort("genre_name", 1)
+    return render_template("edit_review.html", review=review, categories=categories)
 
 # Login Page
 @app.route("/login", methods=["GET", "POST"])
