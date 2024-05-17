@@ -55,19 +55,14 @@
 		<div class="input-field col s12 m8 offset-m2">
 			<i class="fa-solid fa-star prefix red-text text-darken-2"></i>
 			<select name="rating">
-				<option value="" disabled>Choose Rating from 1 to 5</option>
-				{% for category in categories %}
-					{% if category.category_name == review.rating %}
-						<option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
-					{% else %}
-						<option value="{{ category.category_name }}">{{ category.category_name }}</option>
-					{% endif %}
+				<option value="" disabled selected>Choose Rating from 1 to 5</option>
+				{% for rating in ratings %}
+						{% if rating.rating_number == review.rating %}
+						<option value="{{ rating.rating_number }}" selected>{{ rating.rating_number }}</option>
+						{% else %}
+						<option value="{{ rating.rating_number }}">{{ rating.rating_number }}</option>
+						{% endif %}
 				{% endfor %}
-				<option value="1">1</option>
-				<option value="2">2</option>
-				<option value="3">3</option>
-				<option value="4">4</option>
-				<option value="5">5</option>
 			</select>
 			<label>Rating</label>
 		</div>
