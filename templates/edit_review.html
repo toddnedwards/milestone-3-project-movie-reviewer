@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1 class="center-align">Edit reviews</h1>
+<div class="row card-panel grey lighten-5">
+	<form class="col s12" method="POST" action="{{ url_for('create_review') }}">
+		<!-- Movie Title -->
+		<div class="row">
+			<div class="input-field col s12 m8 offset-m2">
+				<i class="fa-solid fa-film prefix red-text text-darken-2"></i>
+				<textarea id="movie_title" name="movie_title" minlength="2"
+                        maxlength="50" class="materialize-textarea validate" required></textarea>
+				<label for="movie_title">Movie Title</label>
+				<label>Movie Title</label>
+			</div>
+		</div>
+		<!-- Genre Selection-->
+        <div class="row">
+            <div class="input-field col s12 m8 offset-m2">
+                <i class="fas fa-folder-open prefix red-text text-darken-2"></i>
+                <select id="genre" name="genre" class="validate" required>
+                    <option value="choose" disabled selected>Choose Genre</option>
+                    {% for category in categories %}
+						<option value="{{ category.genre_name }}">{{ category.genre_name }}</option>
+					{% endfor %}
+				</select>
+			<label for="categories">Genre</label>
+		</div>
+
+		<!-- Subtitle -->
+		<div class="row">
+			<div class="input-field col s12 m8 offset-m2">
+				<i class="fa-solid fa-clapperboard prefix red-text text-darken-2"></i>
+				<textarea id="subtitle" name="subtitle" minlength="5"
+                        maxlength="50" class="materialize-textarea validate" required></textarea>
+				<label for="subtitle">Subtitle</label>
+				<label>Subtitle</label>
+			</div>
+		</div>
+		<!-- Review -->
+		<div class="row">
+			<div class="input-field col s12 m8 offset-m2">
+				<i class="fa-solid fa-comment prefix red-text text-darken-2"></i>
+				<textarea id="review" name="review" minlength="5"
+                        maxlength="500" class="materialize-textarea validate" required></textarea>
+				<label for="review">Review</label>
+				<label>Review</label>
+			</div>
+		</div>
+		<!-- rating -->
+		<div class="input-field col s12 m8 offset-m2">
+			<i class="fa-solid fa-star prefix red-text text-darken-2"></i>
+			<select>
+			  <option value="choose" disabled selected>Choose Rating from 1 to 5</option>
+			  <option value="1">1</option>
+			  <option value="2">2</option>
+			  <option value="3">3</option>
+			  <option value="4">4</option>
+			  <option value="5">5</option>
+			</select>
+			<label>Rating</label>
+		  </div>
+		<!-- submit button -->
+		<div class="row">
+			<button type="submit" class="col s10 offset-s1 m6 offset-m3 btn-large red darken-4">
+                    Submit Review 
+				<i class="fa-solid fa-plus"></i>
+			</button>
+		</div>
+	</form>
+</div>
+
+    <div class="row reviews-section">
+        {% for review in reviews %}
+        <div class="col s12 m4">
+            <div class="card large card-panel card-shadow blue-grey lighten-3">
+                <h4>Movie: {{ review.movie_title }}</h4>
+                <p class="genre">Genre: {{ review.genre }}</p>
+                <p>{{ review.subtitle }}</p><br>
+                <p>{{ review.review }}</p><br>
+                <p>Reviewed By: {{ review.username }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}
