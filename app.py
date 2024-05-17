@@ -22,13 +22,15 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/index")
 def index():
-    reviews = mongo.db.reviews.find({})
+    reviews = mongo.db.reviews.find({}).limit(3)
     return render_template('index.html', reviews=reviews)
 
 
 # Reviews Page
 @app.route("/get_reviews")
 def reviews():
+    if 'user' not in session or not session['user']:
+        return redirect(url_for('unauthorised'))
     reviews = mongo.db.reviews.find()
     return render_template("reviews.html", reviews=reviews)
 
@@ -36,6 +38,8 @@ def reviews():
 # Register Page
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    if 'user' not in session or not session['user']:
+        return redirect(url_for('unauthorised'))
     if request.method == "POST":
         # check database to see if username already exists
         existing_user = mongo.db.users.find_one(
@@ -61,6 +65,8 @@ def register():
 # create review
 @app.route("/create_review", methods=["GET", "POST"])
 def create_review():
+    if 'user' not in session or not session['user']:
+        return redirect(url_for('unauthorised'))
     if request.method == "POST":
         # Assuming 'current_user_id' is available in the session or another method to identify the current user
         current_user_id = session.get("user_id")
@@ -78,13 +84,15 @@ def create_review():
         flash("Review Successfully Added")
         return redirect(url_for("reviews"))
         
-    genres = mongo.db.genres.find()  # Assuming 'genres' is the collection name
-    return render_template("create_review.html", genres=genres)
+    genre = mongo.db.categories.find()  # Assuming 'genre' is the collection name
+    return render_template("create_review.html", genre=genre)
 
 
 #edit review
 @app.route("/edit_review", methods=["GET", "POST"])
 def edit_review():
+    if 'user' not in session or not session['user']:
+        return redirect(url_for('unauthorised'))
     return render_template("edit_review.html")
 
 # Login Page
@@ -118,10 +126,19 @@ def login():
 
 @app.route("/logout")
 def logout():
+    if 'user' not in session or not session['user']:
+        return redirect(url_for('unauthorised'))
     # remove user from session cookies
     flash("You have been logged out")
     session.pop("user")
     return redirect(url_for("login"))
+
+
+#unauthorised access for users that aren't logged in or have no account
+@app.route("/unauthorised")
+def unauthorised():
+    return render_template("unauthorised.html")
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
