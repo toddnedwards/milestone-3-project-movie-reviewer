@@ -74,6 +74,7 @@ def create_review():
             "genre": request.form.get("genre"),
             "subtitle": request.form.get("subtitle"),
             "review": request.form.get("review"),
+            "rating": request.form.get("rating"),
             "username": session["user"]
         }
         # Insert the review into the reviews collection
