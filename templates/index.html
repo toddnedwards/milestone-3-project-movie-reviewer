@@ -2,30 +2,23 @@
 {% block content %}
 
     <!-- Top Page Headings & background image -->
-<main style="background-image: url('/static/images/background-image-cropped.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 90vh;
-    margin: 0;
-    padding: 0;">    
-    <div class="container index-heading">
-        <div class="row">
+<main>  
+        <div class="row s12 m12 index-background-img index-heading">
             <h1 class="center-align index-heading white-text text-shadow">Welcome To Movie Reviewers</h1>
             <h2 class="center-align red-text text-darken-2 text-shadow">Home of the greatest movie reviews</h2><br>
             <p class="center-align white-text index-p text-shadow">Get Started Now!</p>
-        </div>
+       
             <!-- Register Button -->
-        {% if session.user %}
-
-        {% else %}
-        <div class="row">
-            <div class="center-align">
-                <a href="{{ url_for("register") }}" id="register-btn" class="waves-effect waves-light red darken-4 btn-large center-align md-2 offset-md-5">
-                    <i class="fa-solid fa-film"></i> Register </a>
+            {% if session.user %}
+            {% else %}
+            <div class="row">
+                <div class="center-align">
+                    <a href="{{ url_for("register") }}" id="register-btn" class="waves-effect waves-light red darken-4 btn-large center-align md-2 offset-md-5">
+                        <i class="fa-solid fa-film"></i> Register </a>
+                </div>
             </div>
-        </div>
         {% endif %}
-    </div>
+        </div>
 
     <!-- Example Reviews -->
     

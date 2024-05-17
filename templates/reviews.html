@@ -12,10 +12,10 @@
 
     <div class="row reviews-section">
         {% for review in reviews %}
-        <div class="col s12 m4">
+        <div class="col s12 m6 l4">
             <div class="card large card-panel card-shadow blue-grey lighten-3">
                 <h4>Movie: {{ review.movie_title }}</h4>
-                <p class="genre">Genre: {{ review.genre }}</p>
+                <p class="genre">Genre: {{ review.genre }}
                 <p>{{ review.subtitle }}</p><br>
                 <p>{{ review.review }}</p><br>
                 <p>{{ review.rating }}/5</p>
