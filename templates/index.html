@@ -15,12 +15,16 @@
             <p class="center-align white-text index-p text-shadow">Get Started Now!</p>
         </div>
             <!-- Register Button -->
+        {% if session.user %}
+
+        {% else %}
         <div class="row">
             <div class="center-align">
                 <a href="{{ url_for("register") }}" id="register-btn" class="waves-effect waves-light red darken-4 btn-large center-align md-2 offset-md-5">
                     <i class="fa-solid fa-film"></i> Register </a>
             </div>
         </div>
+        {% endif %}
     </div>
 
     <!-- Example Reviews -->

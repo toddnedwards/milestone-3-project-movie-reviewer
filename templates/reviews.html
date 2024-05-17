@@ -1,19 +1,24 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h1 class="center-align">Movie Reviews</h1>
-    <h3 class="center-align red-text text-darken-2">See The Best Movies Ever created below. and the worst!</h3>
+<div class="row s12 m12 reviews-background-img">
+    <div class="col m8 offset-m2 reviews-heading-text">
+        <h1 class="center-align white-text"><i class="fa-solid fa-ticket red-text"></i> Movie Reviews</h1>
+        <h3 class="center-align red-text text-darken-2">See The Best Movies Ever created below. and the worst!</h3>
+    </div>
+</div>
     
     
 
     <div class="row reviews-section">
         {% for review in reviews %}
-        <div class="col s12 m3">
-            <div class="card-panel blue-grey lighten-3">
+        <div class="col s12 m4">
+            <div class="card large card-panel card-shadow blue-grey lighten-3">
                 <h4>Movie: {{ review.movie_title }}</h4>
-                <p class="genre">Genre: {{ review.genre }}</p><br>
+                <p class="genre">Genre: {{ review.genre }}</p>
                 <p>{{ review.subtitle }}</p><br>
                 <p>{{ review.review }}</p><br>
+                <p>{{ review.rating }}/5</p>
                 <p>Reviewed By: {{ review.username }}</p>
             </div>
         </div>
