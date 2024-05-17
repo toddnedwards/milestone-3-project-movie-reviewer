@@ -84,8 +84,8 @@ def create_review():
         flash("Review Successfully Added")
         return redirect(url_for("reviews"))
         
-    genre = mongo.db.categories.find()  # Assuming 'genre' is the collection name
-    return render_template("create_review.html", genre=genre)
+    categories = mongo.db.categories.find().sort("genre_name", 1)
+    return render_template("create_review.html", categories=categories)
 
 
 #edit review
