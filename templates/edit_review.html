@@ -8,21 +8,23 @@
 		<div class="row">
 			<div class="input-field col s12 m8 offset-m2">
 				<i class="fa-solid fa-film prefix red-text text-darken-2"></i>
-				<textarea id="movie_title" name="movie_title" minlength="2"
-                        maxlength="50" class="materialize-textarea validate" required></textarea>
+				<input id="movie_title" name="movie_title" minlength="2"
+                        maxlength="50" value="{{ review.movie_title }}" class="materialize-textarea validate" required></input>
 				<label for="movie_title">Movie Title</label>
-				<label>Movie Title</label>
-			</div>
+			</div> 
 		</div>
 		<!-- Genre Selection-->
         <div class="row">
 			<div class="input-field col s12 m8 offset-m2">
 				<i class="fas fa-folder-open prefix red-text text-darken-2"></i>
 				<select id="genre" name="genre" class="validate" required>
-					<option value="" disabled selected>Choose Genre</option>
+					<option value="" disabled>Choose Genre</option>
 					{% for category in categories %}
-						<option value="{{ category.genre_name }}" 
-					{% if category.genre_name == review.genre %}selected{% endif %}>{{ category.genre_name }}</option>
+						{% if category.genre_name == review.genre %}
+						<option value="{{ category.genre_name }}" selected>{{ category.genre_name }}</option>
+						{% else %}
+						<option value="{{ category.genre_name }}">{{ category.genre_name }}</option>
+						{% endif %}
 					{% endfor %}
 				</select>
 				<label for="genre">Genre</label>
@@ -34,7 +36,7 @@
 			<div class="input-field col s12 m8 offset-m2">
 				<i class="fa-solid fa-clapperboard prefix red-text text-darken-2"></i>
 				<textarea id="subtitle" name="subtitle" minlength="5"
-                        maxlength="50" class="materialize-textarea validate" required></textarea>
+                        maxlength="50" value="" class="materialize-textarea validate" required>{{ review.subtitle }}</textarea>
 				<label for="subtitle">Subtitle</label>
 				<label>Subtitle</label>
 			</div>
@@ -44,7 +46,7 @@
 			<div class="input-field col s12 m8 offset-m2">
 				<i class="fa-solid fa-comment prefix red-text text-darken-2"></i>
 				<textarea id="review" name="review" minlength="5"
-                        maxlength="500" class="materialize-textarea validate" required></textarea>
+                        maxlength="500" class="materialize-textarea validate" required>{{ review.review }}</textarea>
 				<label for="review">Review</label>
 				<label>Review</label>
 			</div>
@@ -53,7 +55,14 @@
 		<div class="input-field col s12 m8 offset-m2">
 			<i class="fa-solid fa-star prefix red-text text-darken-2"></i>
 			<select name="rating">
-				<option value="" disabled selected>Choose Rating from 1 to 5</option>
+				<option value="" disabled>Choose Rating from 1 to 5</option>
+				{% for category in categories %}
+					{% if category.category_name == review.rating %}
+						<option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
+					{% else %}
+						<option value="{{ category.category_name }}">{{ category.category_name }}</option>
+					{% endif %}
+				{% endfor %}
 				<option value="1">1</option>
 				<option value="2">2</option>
 				<option value="3">3</option>
@@ -65,7 +74,7 @@
 		<!-- submit button -->
 		<div class="row">
 			<button type="submit" class="col s10 offset-s1 m6 offset-m3 btn-large red darken-4">
-                    Submit Review 
+                    Submit Changes
 				<i class="fa-solid fa-plus"></i>
 			</button>
 		</div>
