@@ -98,3 +98,32 @@ h1, h2, h3 {
 .sidenav li>a {
     margin-top: 15px;
 }
+
+/* PHONE VERSION */
+@media (min-width: 280px) and (max-width: 480px) {
+    nav .brand-logo {
+        font-size: 25px;
+    }
+    h1 {
+        font-size: 40px;
+    }
+    h2 {
+        font-size: 28px;
+    }
+    h3 {
+        font-size: 25px;
+    }
+    h4 {
+        text-align: center;
+    }
+    p {
+        font-size: 13px;
+        margin-top: 0;
+    }
+    .index-heading{
+        padding-top: 10px;
+    }
+    .reviews-heading-text {
+        margin-top:40px;
+    }
+}
