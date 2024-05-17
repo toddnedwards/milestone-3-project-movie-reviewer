@@ -105,7 +105,8 @@ def edit_review(review_id):
 
     review = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
     categories = mongo.db.categories.find().sort("genre_name", 1)
-    return render_template("edit_review.html", review=review, categories=categories)
+    ratings = mongo.db.ratings.find().sort("rating_number", 1)
+    return render_template("edit_review.html", review=review, categories=categories, ratings=ratings)
 
 # Login Page
 @app.route("/login", methods=["GET", "POST"])
