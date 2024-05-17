@@ -22,8 +22,8 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/index")
 def index():
-    home_reviews = mongo.db.reviews.find({}).limit(3)
-    return render_template('index.html', home_reviews=home_reviews)
+    reviewshome = mongo.db.reviews.find({}).limit(3)
+    return render_template('index.html', reviews=reviewshome)
 
 
 # Reviews Page
