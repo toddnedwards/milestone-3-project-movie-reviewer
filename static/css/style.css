@@ -54,3 +54,31 @@ h1, h2, h3 {
 .genre {
     font-size: 20px;
 }
+
+.social-icon {
+    font-size: 30px;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+.social-icon:hover {
+    color: red;
+    transition: 0.3s;
+}
+
+.reviews-background-img {
+    position: relative;
+    filter: brightness(90%);
+    box-sizing: border-box!important;
+    max-width: 100%!important;
+    height: 300px!important;
+    background-image: url('/static/images/background-image-cropped.jpg')!important;
+    background-repeat: no-repeat!important;
+    background-position: center!important;
+    background-size: cover!important;
+}
+
+.reviews-heading-text {
+    background-color: rgba(0, 0, 0, 0.7);
+    margin-top: 30px;
+}
