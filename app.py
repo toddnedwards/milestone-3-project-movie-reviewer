@@ -100,13 +100,21 @@ def edit_review(review_id):
                 "rating": request.form.get("rating"),
                 "username": session["user"]
         }
-        mongo.db.reviews.update({"_id": ObjectId(review_id)}, submit)
+        mongo.db.reviews.update_one({"_id": ObjectId(review_id)}, {"$set": submit})
         flash("Review Successfully Updated")
+        return redirect(url_for('reviews'))
 
     review = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
     categories = mongo.db.categories.find().sort("genre_name", 1)
     ratings = mongo.db.ratings.find().sort("rating_number", 1)
     return render_template("edit_review.html", review=review, categories=categories, ratings=ratings)
+
+# Delete Review
+@app.route("/delete_review/<review_id>")
+def delete_review(review_id):
+    mongo.db.reviews.remove({"_id": ObjectId(review_id)})
+    flash("Review Successfully Deleted")
+    return redirect(url_for('reviews'))
 
 # Login Page
 @app.route("/login", methods=["GET", "POST"])
