@@ -78,7 +78,23 @@ h1, h2, h3 {
     background-size: cover!important;
 }
 
+.index-background-img {
+    position: relative;
+    filter: brightness(90%);
+    box-sizing: border-box!important;
+    max-width: 100%!important;
+    height: 500px!important;
+    background-image: url('/static/images/background-image-cropped.jpg')!important;
+    background-repeat: no-repeat!important;
+    background-position: center!important;
+    background-size: cover!important;
+}
+
 .reviews-heading-text {
     background-color: rgba(0, 0, 0, 0.7);
     margin-top: 30px;
+}
+
+.sidenav li>a {
+    margin-top: 15px;
 }
