@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class="center-align">
+        <h1 class="red-text">You are not authorised to view this page</h1>
+        <h3>Please log in <a href="{{ url_for('login') }}">here</a>
+        </h3>
+    </div>
+
+
+{% endblock %}
