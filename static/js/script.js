@@ -3,3 +3,5 @@ $(document).ready(function(){
     $("select").formSelect();
   });
 
+document.getElementById("year").innerHTML = new Date().getFullYear();
+
