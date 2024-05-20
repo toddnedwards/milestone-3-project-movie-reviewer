@@ -144,7 +144,7 @@ def login():
             
     return render_template("login.html")
 
-
+# logout button
 @app.route("/logout")
 def logout():
     if 'user' not in session or not session['user']:

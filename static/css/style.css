@@ -13,6 +13,10 @@ h1, h2, h3 {
     text-transform: capitalize;
 }
 
+h2 {
+    font-size: 34px;
+}
+
 .index-heading {
     padding-top: 50px;
 }
@@ -100,7 +104,7 @@ h1, h2, h3 {
 }
 
 /* PHONE VERSION */
-@media (min-width: 280px) and (max-width: 480px) {
+@media (min-width: 280px) and (max-width: 768px) {
     nav .brand-logo {
         font-size: 25px;
     }
@@ -126,4 +130,17 @@ h1, h2, h3 {
     .reviews-heading-text {
         margin-top:40px;
     }
+}
+
+/* TABLET VERSION */
+
+@media (min-width: 768px) and (max-width: 960px) {
+
+    h1 {
+        font-size: 38px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+
 }
