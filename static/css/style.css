@@ -103,6 +103,11 @@ h2 {
     margin-top: 15px;
 }
 
+.card.large {
+    height: 600px; /* Adjust this value to your desired height */
+}
+
+
 /* PHONE VERSION */
 @media (min-width: 280px) and (max-width: 768px) {
     nav .brand-logo {
@@ -144,3 +149,4 @@ h2 {
     }
 
 }
+
