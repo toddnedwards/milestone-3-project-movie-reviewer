@@ -54,7 +54,7 @@
 		<!-- rating -->
 		<div class="input-field col s12 m8 offset-m2">
 			<i class="fa-solid fa-star prefix red-text text-darken-2"></i>
-			<select name="rating">
+			<select name="rating" required>
 				<option value="" disabled selected>Choose Rating from 1 to 5</option>
 				{% for rating in ratings %}
 						{% if rating.rating_number == review.rating %}
