@@ -24,9 +24,6 @@
                 {% if session.user %} <!-- options to show once logged in -->
                     <li><a href="{{ url_for('create_review') }}">Create Review</a></li>
                     <li><a href="{{ url_for('reviews') }}">Reviews</a></li>
-                    {% if session.user|lower == "admin"|lower %}
-                        <li><a href="#">Edit All</a></li>
-                    {% endif %}
                     <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                 {% else %}
                     <li><a href="{{ url_for('login') }}">Log In</a></li>
@@ -39,17 +36,14 @@
         <!-- mobile navbar -->
           <ul class="sidenav black" id="mobile-demo">
             <li><a href="{{ url_for('index') }}">Home</a></li>
-                {% if session.user %}
-                <li><a href="{{ url_for('create_review') }}">Create Review</a></li>
-                <li><a href="{{ url_for('reviews') }}">Reviews</a></li>
-                    {% if session.user|lower == "admin"|lower %}
-                        <li><a href="#">Leave A Review</a></li>
-                    {% endif %}
-                    <li><a href="{{ url_for('logout') }}">Log Out</a></li>
-                {% else %}
-                    <li><a href="{{ url_for('login') }}">Log In</a></li>
-                    <li><a href="{{ url_for('register') }}">Register</a></li>
-                {% endif %}
+            {% if session.user %} <!-- options to show once logged in -->
+              <li><a href="{{ url_for('create_review') }}">Create Review</a></li>
+              <li><a href="{{ url_for('reviews') }}">Reviews</a></li>
+              <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+          {% else %}
+              <li><a href="{{ url_for('login') }}">Log In</a></li>
+              <li><a href="{{ url_for('register') }}">Register</a></li>
+          {% endif %}
           </ul>
     </header>
 
