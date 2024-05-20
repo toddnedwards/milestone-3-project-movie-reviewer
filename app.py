@@ -25,13 +25,12 @@ def index():
     reviewshome = mongo.db.reviews.find({}).limit(3)
     return render_template('index.html', reviews=reviewshome)
 
-
 # Reviews Page
 @app.route("/get_reviews")
 def reviews():
     if 'user' not in session or not session['user']:
         return redirect(url_for('unauthorised'))
-    reviews = mongo.db.reviews.find()
+    reviews = mongo.db.reviews.find() 
     return render_template("reviews.html", reviews=reviews)
 
 
