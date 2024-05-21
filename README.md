@@ -1,42 +1,155 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# **Movie Reviewers
 
-Welcome,
+[View deployed project here](https://milestone-3-movie-reviewer-3acc5e62937b.herokuapp.com/)
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![Application shown on multiple devices](documentation/movie-reviewers-device-mockup.png)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+## **Site Overview**
 
-## Codeanywhere Reminders
+Movie Reviewers is an online application for movie fans and critiques to read post reviews of movies that they have watched to share with other people. Users can only see examples of the reviews until they login or register. Once logged in and registered, users can create, edit and delete their own reviews, as well search through reviews of other movies that they may have watched or want to watch and find an opinion on.
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+## **Table of contents**
 
-`python3 -m http.server`
+- [**Movie Reviewers**](#movie-reviewers)
+- [**Site Overview**](#site-overview)
+- [**Planning Stage**](#planning-stage)
+  - [**Target Audiences**](#target-audiences)
+  - [**User Stories**](#user-stories)
+  - [**Site Aims**](#site-aims)
+  - [**Wireframes**](#wireframes)
+    - [**Desktop View**](#desktop-wireframe)
+    - [**Mobile View**](#phone-wireframe)
+  - [**Color Scheme**](#color-scheme)
+- [**Typography**](#typography)
+- [**Features**](#features)
+- [**Future Enhancements**](#future-enhancements)
+- [**Testing Phase**](#testing-phase)
+  - [**Responsiveness**](#responsiveness)
+  - [**Functionality**](#functionality)
+  - [**Validators**](#validators)
+  - [**Lighthouse**](#lighthouse)
+  - [**Testing user stories**](#testing-user-stories)
+- [**Bugs**](#bugs)
+- [**Deployment**](#deployment)
+- [**Tech**](#tech)
+- [**Credits**](#credits)
+  - [**Honourable mentions**](#honourable-mentions)
+  - [**Content**](#content)
+  - [**Media**](#media)
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+## **Planning Stage**
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+### **Target Audiences**
 
-`http_server`
+* Users that enjoy movies
+* Users that would like to discuss new and old movies and share their opinons
+* Users looking for inspiration for new movies to watch from other user's reviews
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### **User Stories**
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+* As a user, I want it to be user friendly and easy for me to use
+* As a user, I want to be able to see text clearly and know the purpose of the site straight away from its title and subtitle
+* As a user, I want the site to be responsive on all devices
+* As a user, I want to be able to create an account
+* As a user, I want to be able to log in to my account once created
+* As a user, I want to be able to see all reviews that exist once I have logged in
+* As a user, I want to be able to create a review and navigate to it easily within the navigation area
+* As a user, I want to be able to edit my reviews if I've changed my opinion and made a typo and wish to amend it
+* As a user, I want to be able delete reviews that I have created
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+* As admin, I want to be able to login to my admin account
+* As admin, I want to be able to edit and delete all reviews from the reviews section regardless of who has created them
 
-To log into the Heroku toolbelt CLI:
+### **Site Aims**
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+* Have a simple to use application where the users can create, read, edit and delete movie reviews.
+* Let users be able to easily register and account, and once complete be able to log in to their account.
+* Once users have logged in, allow them create, edit and delete their own movie reviews.
+* Once logged in, allow all users to see all reviews, including reviews created by other users.
+* To allow the user to search through all reviews quickly and easily.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### **Wireframes**
 
----
+#### **Desktop View**
 
-Happy coding!
+<details>
+<summary>Home Page</summary>
+<br>
+<img alt="Home page desktop wireframe" src="documentation/wireframes/home-page-computer.png">
+</details>
+<br>
+<details>
+<summary>Reviews Page</summary>
+<br>
+<img alt="Reviews page desktop wireframe" src="documentation/wireframes/reviews-page-computer.png">
+</details>
+<br>
+<details>
+<summary>Create Review Page</summary>
+<br>
+<img alt="Create review page desktop wireframe" src="documentation/wireframes/create-review-page-computer.png">
+</details>
+<br>
+<details>
+<summary>Edit Review Page</summary>
+<br>
+<img alt="Edit review page desktop wireframe" src="documentation/wireframes/edit-review-page-computer.png">
+</details>
+<br>
+<details>
+<summary>Register Page</summary>
+<br>
+<img alt="Edit review page desktop wireframe" src="documentation/wireframes/register-page-compute.png">
+</details>
+<br>
+<details>
+<summary>Login Page</summary>
+<br>
+<img alt="Edit review page desktop wireframe" src="documentation/wireframes/login-page-computer.png">
+</details>
+<br>
+
+#### **Mobile View**
+
+<details>
+<summary>Home Page</summary>
+<br>
+<img alt="Home page desktop wireframe" src="documentation/wireframes/home-page-phone.png">
+</details>
+<br>
+<details>
+<summary>Reviews Page</summary>
+<br>
+<img alt="Reviews page desktop wireframe" src="documentation/wireframes/reviews-page-phone.png">
+</details>
+<br>
+<details>
+<summary>Create Review Page</summary>
+<br>
+<img alt="Create review page desktop wireframe" src="documentation/wireframes/create-review-page-phone.png">
+</details>
+<br>
+<details>
+<summary>Edit Review Page</summary>
+<br>
+<img alt="Edit review page desktop wireframe" src="documentation/wireframes/edit-review-page-phone.png">
+</details>
+<br>
+<details>
+<summary>Register Page</summary>
+<br>
+<img alt="Edit review page desktop wireframe" src="documentation/wireframes/register-page-phone.png">
+</details>
+<br>
+<details>
+<summary>Login Page</summary>
+<br>
+<img alt="Edit review page desktop wireframe" src="documentation/wireframes/login-page-phone.png">
+</details>
+<br>
+
+
+### **Color Scheme**
 
 
 thanks to Sarah for helping with mongo db connection issues I had
