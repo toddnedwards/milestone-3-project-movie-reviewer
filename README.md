@@ -151,5 +151,35 @@ Movie Reviewers is an online application for movie fans and critiques to read po
 
 ### **Color Scheme**
 
+The color scheme has been mainly provided by Materialize CSS:
+[Materialize CSS options](https://materializecss.com/color.html)
+
+The main color schemes used are:
+
+Navigation bar: black (provided by materialize CSS)<br>
+Footer: black (provided by materialize CSS)<br>
+Body background: #eceff1 (Hex color code, off white)<br>
+H1 text when against background images (Home/index page and Reviews Page): amber-text text-lighten-2 (provided by materialize CSS)<br>
+Review cards (Home/index page and Reviews Page): blue darken-1 (provided by materialize CSS)
+
+The colours I chose we're to keep the design simple, but also similar colours used in cinemas, such as royal blue, gold and red which is provided by the main background image.<br>
+[See background image here](static/images/background-image-cropped.jpg)
+
+## ** Typography **
+
+I decided to use the oswald font family from google as I had searched for different cinema fonts on google and this seemed to look the best and makes the text stand out well also against background images and colours. <br>
+
+[https://fonts.google.com/specimen/Oswald](https://fonts.google.com/specimen/Oswald)
+
+
+
+
+
+
+
 
 thanks to Sarah for helping with mongo db connection issues I had
+
+
+
+device mockup created with: https://techsini.com/multi-mockup/index.php
