@@ -1,3 +1,7 @@
+/*  */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+
 body {
     background-color: #eceff1;
     display: flex;
@@ -79,6 +83,7 @@ h2 {
     background-repeat: no-repeat!important;
     background-position: center!important;
     background-size: cover!important;
+    background-color: #000000;
 }
 
 .index-background-img {
@@ -91,6 +96,7 @@ h2 {
     background-repeat: no-repeat!important;
     background-position: center!important;
     background-size: cover!important;
+    background-color: #000000;
 }
 
 .reviews-heading-text {
