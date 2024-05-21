@@ -33,6 +33,12 @@ def reviews():
     reviews = mongo.db.reviews.find() 
     return render_template("reviews.html", reviews=reviews)
 
+# Search on reviews page
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    reviews = mongo.db.reviews.find({"$text": {"$search": query}}) 
+    return render_template("reviews.html", reviews=reviews)
 
 # Register Page
 @app.route("/register", methods=["GET", "POST"])
