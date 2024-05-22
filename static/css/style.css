@@ -18,6 +18,19 @@ footer {
     margin-top: auto;
 }
 
+.btn {
+    font-weight: bold;
+}
+
+input {
+    color: black;
+    font-family: 'Oswald', sans-serif;
+}
+
+.dropdown-content li>a, .dropdown-content li>span {
+    color: black;
+}
+
 h1, h2, h3 {
     text-transform: capitalize;
 }
@@ -87,7 +100,7 @@ label.form-label {
     position: relative;
     filter: brightness(90%);
     box-sizing: border-box!important;
-    width: 100%!important;
+    max-width: 100%!important;
     height: 300px!important;
     background-image: url('/static/images/background-image-cropped.webp')!important;
     background-repeat: no-repeat!important;
@@ -100,7 +113,7 @@ label.form-label {
     position: relative;
     filter: brightness(90%);
     box-sizing: border-box!important;
-    width: 100%!important;
+    max-width: 100%!important;
     height: 500px!important;
     background-image: url('/static/images/background-image-cropped.webp')!important;
     background-repeat: no-repeat!important;

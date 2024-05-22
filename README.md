@@ -399,6 +399,9 @@ Devtools on Google Chrome has been used to test across all devices to make sure 
 #### CSS Validator
 
 
+CSS passed without any errors using the [CSS Validation service by W3.org](https://jigsaw.w3.org/css-validator/)
+
+![CSS Validation](documentation/css-validation/css-validation.png)
 
 #### CI Python Linter
 
@@ -406,10 +409,6 @@ Python code validated with [Code Institute Python Linter](https://pep8ci.herokua
 No errors found
 
 ![CI Python Linter Result](documentation/python%20validator.png)
-
-CSS passed without any errors using the [CSS Validation service by W3.org](https://jigsaw.w3.org/css-validator/)
-
-![CSS Validation](documentation/css-validation/css-validation.png)
 
 ### **Lighthouse**
 
@@ -422,41 +421,42 @@ Using google lighthouse, I check how my web application scored against performan
 <details>
 <summary>Home Page</summary>
 <br>
-<img alt="Home Page lighthouse desktop result" src="documentation/">
+<img alt="Home Page lighthouse desktop result" src="documentation/lighthouse/lighthouse-index-desktop.png">
 </details>
 <br>
 <hr>
 <details>
 <summary>Login Page</summary>
 <br>
-<img alt="Login Page lighthouse desktop result" src="documentation/">
+<img alt="Login Page lighthouse desktop result" src="documentation/lighthouse/lighthouse-login-desktop.png">
 </details>
 <br>
 <hr>
 <details>
 <summary>Register Page</summary>
 <br>
-<img alt="Register Page lighthouse desktop result" src="documentation/">
+<img alt="Register Page lighthouse desktop result" src="documentation/lighthouse/lighthouse-register-desktop.png">
 </details>
 <br>
 <hr>
 <details>
 <summary>Reviews Page</summary>
 <br>
-<img alt="Reviews Page lighthouse desktop result" src="documentation/">
+<img alt="Reviews Page lighthouse desktop result" src="documentation/lighthouse/lighthouse-reviews-desktop.png">
 </details>
 <br>
 <hr>
 <details>
 <summary>Create Review Page</summary>
 <br>
-<img alt="Create Review Page lighthouse desktop result" src="documentation/">
+<img alt="Create Review Page lighthouse desktop result" src="documentation/lighthouse/lighthouse-create-reviews-desktop.png">
 </details>
 <br>
 <hr>
+<details>
 <summary>Edit Review Page</summary>
 <br>
-<img alt="Edit Review Page lighthouse desktop result" src="documentation/">
+<img alt="Edit Review Page lighthouse desktop result" src="documentation/lighthouse/lighthouse-edit-review-desktop.png">
 </details>
 <br>
 <hr>
@@ -466,41 +466,41 @@ Using google lighthouse, I check how my web application scored against performan
 <details>
 <summary>Home Page</summary>
 <br>
-<img alt="Home Page lighthouse Mobile result" src="documentation/">
+<img alt="Home Page lighthouse Mobile result" src="documentation/lighthouse/">
 </details>
 <br>
 <hr>
 <details>
 <summary>Login Page</summary>
 <br>
-<img alt="Login Page lighthouse Mobile result" src="documentation/">
+<img alt="Login Page lighthouse Mobile result" src="documentation/lighthouse/">
 </details>
 <br>
 <hr>
 <details>
 <summary>Register Page</summary>
 <br>
-<img alt="Register Page lighthouse Mobile result" src="documentation/">
+<img alt="Register Page lighthouse Mobile result" src="documentation/lighthouse/">
 </details>
 <br>
 <hr>
 <details>
 <summary>Reviews Page</summary>
 <br>
-<img alt="Reviews Page lighthouse Mobile result" src="documentation/">
+<img alt="Reviews Page lighthouse Mobile result" src="documentation/lighthouse/">
 </details>
 <br>
 <hr>
 <details>
 <summary>Create Review Page</summary>
 <br>
-<img alt="Create Review Page lighthouse Mobile result" src="documentation/">
+<img alt="Create Review Page lighthouse Mobile result" src="documentation/lighthouse/">
 </details>
 <br>
 <hr>
 <summary>Edit Review Page</summary>
 <br>
-<img alt="Edit Review Page lighthouse Mobile result" src="documentation/">
+<img alt="Edit Review Page lighthouse Mobile result" src="documentation/lighthouse/">
 </details>
 <br>
 <hr>
