@@ -38,7 +38,6 @@
 				<textarea id="subtitle" name="subtitle" minlength="5"
                         maxlength="50" value="" class="materialize-textarea validate" required>{{ review.subtitle }}</textarea>
 				<label for="subtitle">Subtitle</label>
-				<label>Subtitle</label>
 			</div>
 		</div>
 		<!-- Review -->
@@ -48,7 +47,6 @@
 				<textarea id="review" name="review" minlength="5"
                         maxlength="400" class="materialize-textarea validate" required>{{ review.review }}</textarea>
 				<label for="review">Review</label>
-				<label>Review</label>
 			</div>
 		</div>
 		<!-- rating -->
@@ -64,7 +62,7 @@
 						{% endif %}
 				{% endfor %}
 			</select>
-			<label>Rating</label>
+			<label for="rating">Rating</label>
 		</div>
 		<!-- submit button -->
 		<div class="row">
