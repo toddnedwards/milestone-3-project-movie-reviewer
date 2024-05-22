@@ -21,7 +21,7 @@
         <nav class="nav-extended black">
             <div class="nav-wrapper">
               <a href="{{ url_for('index') }}" class="brand-logo">Movie Reviewers</a>
-              <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
+              <a href="#" data-target="mobile-demo" class="sidenav-trigger" aria-label="Movie Reviewers Navigation"><i class="fas fa-bars"></i></a>
               <ul class="right hide-on-med-and-down">
                 <li><a href="{{ url_for('index') }}">Home</a></li>
                 {% if session.user %} <!-- options to show once logged in -->
@@ -37,8 +37,8 @@
           </nav>
         
         <!-- mobile navbar -->
-          <ul class="sidenav black" id="mobile-demo">
-            <li><a href="{{ url_for('index') }}">Home</a></li>
+          <ul class="sidenav black" id="mobile-demo" aria-label="Movie Reviewers Mobile Navigation">
+            <li><a href="{{ url_for('index') }}" aria-label="Home">Home</a></li>
             {% if session.user %} <!-- options to show once logged in -->
               <li><a href="{{ url_for('create_review') }}">Create Review</a></li>
               <li><a href="{{ url_for('reviews') }}">Reviews</a></li>
