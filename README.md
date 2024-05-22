@@ -4,6 +4,8 @@
 
 ![Application shown on multiple devices](documentation/movie-reviewers-device-mockup.png)
 
+
+
 ## **Site Overview**
 
 Movie Reviewers is an online application for movie fans and critiques to read post reviews of movies that they have watched to share with other people. Users can only see examples of the reviews until they login or register. Once logged in and registered, users can create, edit and delete their own reviews, as well search through reviews of other movies that they may have watched or want to watch and find an opinion on.
@@ -382,7 +384,11 @@ links to the corresponding movie on IMDB or rotten tomatoes to show further revi
 
 ### **Responsiveness**
 
-
+Responsiveness has been provided by Materialize using its S, M and L classes. CSS has also been added for mobile and tablet views for font sizes and background image layout. 
+<br>
+Responsiveness has been tested on Google Chrome, Safari and Firefox.
+<br>
+Devtools on Google Chrome has been used to test across all devices to make sure all instances are responsive.
 
 ### **Functionality**
 
@@ -397,6 +403,23 @@ CSS passed without any errors using the [CSS Validation service by W3.org](https
 ![CSS Validation](documentation/css-validation/css-validation.png)
 
 ### **Lighthouse**
+
+Using google lighthouse, I check how my web application scored against performance, accessibility, best practice, and SEO. I downsized the main image used on index and reviews pages to lower loading time using the advice below. Lighthouse pointed that excess loading time was caused by jquery and materialize javascripts.
+
+[Google sizing advice](https://www.google.com/search?q=what+size+should+hero+image+be+for+website&sca_esv=8b3c2fe050857b40&rlz=1C5CHFA_enGB1022GB1024&ei=sPVNZtatNK7WhbIP_5C-8As&ved=0ahUKEwjWxceRsaGGAxUua0EAHX-ID74Q4dUDCBA&uact=5&oq=what+size+should+hero+image+be+for+website&gs_lp=Egxnd3Mtd2l6LXNlcnAiKndoYXQgc2l6ZSBzaG91bGQgaGVybyBpbWFnZSBiZSBmb3Igd2Vic2l0ZTIIECEYoAEYwwRI0xhQrwdYvBdwAXgBkAEAmAGhAaAB5weqAQM3LjO4AQPIAQD4AQGYAgigAvsEwgIKEAAYsAMY1gQYR8ICChAhGKABGMMEGAqYAwCIBgGQBgiSBwM3LjGgB-Uw&sclient=gws-wiz-serp)
+
+#### Desktop View Results
+
+<details>
+<summary>Home Page</summary>
+<br>
+<img alt="Home Page lighthouse result" src="documentation/l">
+</details>
+<br>
+<hr>
+
+
+
 
 
 
