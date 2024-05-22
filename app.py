@@ -134,24 +134,24 @@ def delete_review(review_id):
 
 # Login Page
 @app.route("/login", methods=["GET", "POST"])
+@app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
         existing_user = mongo.db.users.find_one(
-            {"username": request.form.get("username").lower()})
+            {"username": request.form.get("username").lower()}
+        )
 
-    if existing_user:
-        # check hashed password matches users password input
-        if check_password_hash(
-                existing_user["password"], request.form.get("password")):
-            session["user"] = request.form.get("username").lower()
-            flash("Hi {}!".format(request.form.get("username")))
-        return redirect(url_for(
-            "reviews", username=session["user"]))
-        else:
-            # Password doesn't match
-            flash("Incorrect Username and/or Password")
-            return redirect(url_for("login"))
-
+        if existing_user:
+            # Check hashed password matches user's password input
+            if check_password_hash(
+                    existing_user["password"], request.form.get("password")):
+                session["user"] = request.form.get("username").lower()
+                flash("Hi {}!".format(request.form.get("username")))
+                return redirect(url_for("reviews", username=session["user"]))
+            else:
+                # Password doesn't match
+                flash("Incorrect Username and/or Password")
+                return redirect(url_for("login"))
         else:
             # Username doesn't exist
             flash("Incorrect Username and/or Password")
