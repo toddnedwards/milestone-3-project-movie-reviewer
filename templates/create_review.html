@@ -19,7 +19,7 @@
 			<div class="input-field col s12 m8 offset-m2">
 				<i class="fas fa-folder-open prefix red-text text-darken-2"></i>
 				<select id="genre" name="genre" class="validate" required>
-					<option value="choose" disabled selected>Choose Genre</option>
+					<option value="" disabled selected>Choose Genre</option>
 					{% for category in categories %}
 						<option value="{{ category.genre_name }}">{{ category.genre_name }}</option>
 					{% endfor %}
@@ -50,7 +50,7 @@
 		<div class="input-field col s12 m8 offset-m2">
 			<i class="fa-solid fa-star prefix red-text text-darken-2"></i>
 			<select id="rating" name="rating" class="validate" required>
-				<option value="choose" disabled selected>Choose Rating from 1 to 5</option>
+				<option value="" disabled selected>Choose Rating from 1 to 5</option>
 				<option value="1">1</option>
 				<option value="2">2</option>
 				<option value="3">3</option>
