@@ -85,7 +85,7 @@ h2 {
     box-sizing: border-box!important;
     max-width: 100%!important;
     height: 300px!important;
-    background-image: url('/static/images/background-image-cropped.jpg')!important;
+    background-image: url('/static/images/background-image-cropped.webp')!important;
     background-repeat: no-repeat!important;
     background-position: center!important;
     background-size: cover!important;
@@ -98,7 +98,7 @@ h2 {
     box-sizing: border-box!important;
     max-width: 100%!important;
     height: 500px!important;
-    background-image: url('/static/images/background-image-cropped.jpg')!important;
+    background-image: url('/static/images/background-image-cropped.webp')!important;
     background-repeat: no-repeat!important;
     background-position: center!important;
     background-size: cover!important;
