@@ -14,6 +14,10 @@ main {
     flex: 1 0 auto;
   }
 
+footer {
+    margin-top: auto;
+}
+
 h1, h2, h3 {
     text-transform: capitalize;
 }
@@ -112,6 +116,10 @@ h2 {
 
 .card.large {
     height: 600px; /* Adjust this value to your desired height */
+}
+
+.form {
+    margin: 0;
 }
 
 
