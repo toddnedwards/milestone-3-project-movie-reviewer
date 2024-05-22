@@ -62,7 +62,7 @@ def register():
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful")
         return redirect(url_for(
-            "create_review", username=session["user"])) 
+            "reviews", username=session["user"])) 
     return render_template("register.html")
 
 # create review
@@ -136,7 +136,7 @@ def login():
                     flash("Hi {}!".format(
                         request.form.get("username")))
                     return redirect(url_for(
-                        "create_review", username=session["user"]))
+                        "reviews", username=session["user"]))
             else:
                 # Password doesn't match
                 flash("Incorrect Username and/or Password")
