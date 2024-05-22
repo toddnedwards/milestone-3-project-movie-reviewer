@@ -75,6 +75,7 @@ h2 {
 }
 
 .reviews-background-img {
+    margin: 0;
     position: relative;
     filter: brightness(90%);
     box-sizing: border-box!important;
