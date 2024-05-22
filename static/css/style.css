@@ -30,6 +30,10 @@ h2 {
     padding-top: 50px;
 }
 
+label.form-label {
+    color: black;
+}
+
 .index-p {
     font-weight: 700;
     font-size: 25px;
@@ -83,7 +87,7 @@ h2 {
     position: relative;
     filter: brightness(90%);
     box-sizing: border-box!important;
-    max-width: 100%!important;
+    width: 100%!important;
     height: 300px!important;
     background-image: url('/static/images/background-image-cropped.webp')!important;
     background-repeat: no-repeat!important;
@@ -96,7 +100,7 @@ h2 {
     position: relative;
     filter: brightness(90%);
     box-sizing: border-box!important;
-    max-width: 100%!important;
+    width: 100%!important;
     height: 500px!important;
     background-image: url('/static/images/background-image-cropped.webp')!important;
     background-repeat: no-repeat!important;
