@@ -11,7 +11,7 @@
 				<i class="fa-solid fa-film prefix red-text text-darken-2"></i>
 				<textarea id="movie_title" name="movie_title" minlength="2"
                         maxlength="50" class="materialize-textarea validate" required></textarea>
-				<label for="movie_title">Movie Title</label>
+				<label for="movie_title" class="form-label">Movie Title</label>
 			</div>
 		</div>
 		<!-- Genre Selection-->
@@ -24,7 +24,7 @@
 						<option value="{{ category.genre_name }}">{{ category.genre_name }}</option>
 					{% endfor %}
 				</select>
-				<label for="genre">Genre</label>
+				<label for="genre" class="form-label">Genre</label>
 			</div>
 		</div>
 
@@ -34,7 +34,7 @@
 				<i class="fa-solid fa-clapperboard prefix red-text text-darken-2"></i>
 				<textarea id="subtitle" name="subtitle" minlength="5"
                         maxlength="50" class="materialize-textarea validate" required></textarea>
-				<label for="subtitle">Subtitle</label>
+				<label for="subtitle" class="form-label">Subtitle</label>
 			</div>
 		</div>
 		<!-- Review -->
@@ -43,7 +43,7 @@
 				<i class="fa-solid fa-comment prefix red-text text-darken-2"></i>
 				<textarea id="review" name="review" minlength="5"
                         maxlength="500" class="materialize-textarea validate" required></textarea>
-				<label for="review">Review</label>
+				<label for="review" class="form-label">Review</label>
 			</div>
 		</div>
 		<!-- rating -->
@@ -57,7 +57,7 @@
 				<option value="4">4</option>
 				<option value="5">5</option>
 			</select>
-			<label for="rating">Rating</label>
+			<label for="rating" class="form-label">Rating</label>
 		</div>
 		<!-- submit button -->
 		<div class="row">
