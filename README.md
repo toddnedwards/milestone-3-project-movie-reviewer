@@ -398,6 +398,15 @@ Devtools on Google Chrome has been used to test across all devices to make sure 
 
 #### CSS Validator
 
+
+
+#### CI Python Linter
+
+Python code validated with [Code Institute Python Linter](https://pep8ci.herokuapp.com/)
+No errors found
+
+![CI Python Linter Result](documentation/python%20validator.png)
+
 CSS passed without any errors using the [CSS Validation service by W3.org](https://jigsaw.w3.org/css-validator/)
 
 ![CSS Validation](documentation/css-validation/css-validation.png)
@@ -406,22 +415,95 @@ CSS passed without any errors using the [CSS Validation service by W3.org](https
 
 Using google lighthouse, I check how my web application scored against performance, accessibility, best practice, and SEO. I downsized the main image used on index and reviews pages to lower loading time using the advice below. Lighthouse pointed that excess loading time was caused by jquery and materialize javascripts.
 
-[Google sizing advice](https://www.google.com/search?q=what+size+should+hero+image+be+for+website&sca_esv=8b3c2fe050857b40&rlz=1C5CHFA_enGB1022GB1024&ei=sPVNZtatNK7WhbIP_5C-8As&ved=0ahUKEwjWxceRsaGGAxUua0EAHX-ID74Q4dUDCBA&uact=5&oq=what+size+should+hero+image+be+for+website&gs_lp=Egxnd3Mtd2l6LXNlcnAiKndoYXQgc2l6ZSBzaG91bGQgaGVybyBpbWFnZSBiZSBmb3Igd2Vic2l0ZTIIECEYoAEYwwRI0xhQrwdYvBdwAXgBkAEAmAGhAaAB5weqAQM3LjO4AQPIAQD4AQGYAgigAvsEwgIKEAAYsAMY1gQYR8ICChAhGKABGMMEGAqYAwCIBgGQBgiSBwM3LjGgB-Uw&sclient=gws-wiz-serp)
+[Google image sizing advice](https://www.google.com/search?q=what+size+should+hero+image+be+for+website&sca_esv=8b3c2fe050857b40&rlz=1C5CHFA_enGB1022GB1024&ei=sPVNZtatNK7WhbIP_5C-8As&ved=0ahUKEwjWxceRsaGGAxUua0EAHX-ID74Q4dUDCBA&uact=5&oq=what+size+should+hero+image+be+for+website&gs_lp=Egxnd3Mtd2l6LXNlcnAiKndoYXQgc2l6ZSBzaG91bGQgaGVybyBpbWFnZSBiZSBmb3Igd2Vic2l0ZTIIECEYoAEYwwRI0xhQrwdYvBdwAXgBkAEAmAGhAaAB5weqAQM3LjO4AQPIAQD4AQGYAgigAvsEwgIKEAAYsAMY1gQYR8ICChAhGKABGMMEGAqYAwCIBgGQBgiSBwM3LjGgB-Uw&sclient=gws-wiz-serp)
 
 #### Desktop View Results
 
 <details>
 <summary>Home Page</summary>
 <br>
-<img alt="Home Page lighthouse result" src="documentation/l">
+<img alt="Home Page lighthouse desktop result" src="documentation/">
+</details>
+<br>
+<hr>
+<details>
+<summary>Login Page</summary>
+<br>
+<img alt="Login Page lighthouse desktop result" src="documentation/">
+</details>
+<br>
+<hr>
+<details>
+<summary>Register Page</summary>
+<br>
+<img alt="Register Page lighthouse desktop result" src="documentation/">
+</details>
+<br>
+<hr>
+<details>
+<summary>Reviews Page</summary>
+<br>
+<img alt="Reviews Page lighthouse desktop result" src="documentation/">
+</details>
+<br>
+<hr>
+<details>
+<summary>Create Review Page</summary>
+<br>
+<img alt="Create Review Page lighthouse desktop result" src="documentation/">
+</details>
+<br>
+<hr>
+<summary>Edit Review Page</summary>
+<br>
+<img alt="Edit Review Page lighthouse desktop result" src="documentation/">
 </details>
 <br>
 <hr>
 
+#### Mobile View Results
 
-
-
-
+<details>
+<summary>Home Page</summary>
+<br>
+<img alt="Home Page lighthouse Mobile result" src="documentation/">
+</details>
+<br>
+<hr>
+<details>
+<summary>Login Page</summary>
+<br>
+<img alt="Login Page lighthouse Mobile result" src="documentation/">
+</details>
+<br>
+<hr>
+<details>
+<summary>Register Page</summary>
+<br>
+<img alt="Register Page lighthouse Mobile result" src="documentation/">
+</details>
+<br>
+<hr>
+<details>
+<summary>Reviews Page</summary>
+<br>
+<img alt="Reviews Page lighthouse Mobile result" src="documentation/">
+</details>
+<br>
+<hr>
+<details>
+<summary>Create Review Page</summary>
+<br>
+<img alt="Create Review Page lighthouse Mobile result" src="documentation/">
+</details>
+<br>
+<hr>
+<summary>Edit Review Page</summary>
+<br>
+<img alt="Edit Review Page lighthouse Mobile result" src="documentation/">
+</details>
+<br>
+<hr>
 
 ### **Testing User Stories**
 
