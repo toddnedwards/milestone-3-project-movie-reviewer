@@ -268,47 +268,27 @@ All pages show flash messages if changes are made. They are displayed at the top
 
 The Home Page features a H1 and H2 header welcoming the user to the site. This has a background image behind it showing people at the cinema to make it more clear to the user that the intention of the site is for movies and people that enjoy movies. Wihin the background image, it also includes a button that asks the user to register to make this option more obvious than it just being in the navigation bar. This is especially helpful for mobile users as the option is put right in front of them as soon as they visit the page, rather than having to click on the navigation bar to see the options. 
 
-<details>
-<summary>Home Page Mobile View Welcome Section</summary>
+![Home Page Mobile View Welcome Section](documentation/features/home-page-welcome-mobile.png)
 <br>
-<img alt="Home Page Mobile View Welcome Section" src="documentation/features/home-page-welcome-mobile.png">
-</details>
-<br>
-<hr>
 
 The home page also displays 3 reviews which are pulled from the mongo DB database. This is to help the user understand what to expect from the site better if they register and want to read more reviews or create their own. 
 
-<details>
-<summary>Home Page Example Reviews Section</summary>
+![Home Page Example Reviews Section](documentation/features/home-page-reviews-section.png)
 <br>
-<img alt="Home Page Example Reviews Section" src="documentation/features/home-page-reviews-section.png">
-</details>
-<br>
-<hr>
 
 ### Login Page
 
 The login page is a simple design, which displays a H1 header asking the user to log in to the website. It features a form text box for username and a form text box for password. Each form box features an icon. A person with a cog is shown for username helping it appear more obvious to the user for its purpose. The password shows a padlock icon which again makes it more obvious to the user it is for a password section. Labels are also used to show the text 'username' and 'password' within the boxes. A submit button is provided labelled 'log in' with an enter door icon. The submit button is red to stay within the design, and match the red theme that the background image on index and reviews page have, and also the flash text font color, and when hovering over the social media icons in the footer. It also has text and a link at the bottom 'Don't Have An Account? Register Account' which makes it easier for the user if they don't yet have an account, to be taken to the appropriate page quickly rather than having to search on the navigation bar, especially if a mobile user to save the user having to click on the navigation icon to find the option.
 
-<details>
-<summary>Login Page</summary>
+![Login Page Form](documentation/features/login-page.png)
 <br>
-<img alt="Login Page Form" src="documentation/features/login-page.png">
-</details>
-<br>
-<hr>
 
 ### Register Page
 
 The register page has the same design as the login page, using the same layout and sizings. Again, it shows the same icons for username and password, with the same labels, showing 'username' and 'password' for the appropriate boxes. The submit button now displays 'register account' with the same enter door icon as the login submit button. Underneath the submit button, the text and link displays 'Have An Account? Log In' to take the user to the appropriate page if they are already registered. This again saves mobile users having to try find the option by clicking on the navigation and makes navigation easier for the user.
 
-<details>
-<summary>Register Page</summary>
+![Register Page Form](documentation/features/register-page.png)
 <br>
-<img alt="Register Page Form" src="documentation/features/register-page.png">
-</details>
-<br>
-<hr>
 
 ### Reviews Page
 
@@ -316,37 +296,22 @@ The reviews page features H1 heading and H2 subheading to tell the user they are
 <br>
 Underneath the heading, a search bar is displayed. This allows users to filter through the movies by movie title and genre to improve their experience and speed up their search of looking for movies. This includes a search button which is blue to stay with the theme of the review cards, and a red reset button which allows users to reset their search to show all results again. The choice of red also matches the flash message text, the social media hovered icons and is similar to the main colours of the background image. The search bar also includes the label 'Search By Movie Title Or Genre' so the user knows which parameters they can search within.
 
-<details>
-<summary>Reviews Page - Search Bar</summary>
+![Reviews Page Search Bar](documentation/features/reviews-search-bar.png)
 <br>
-<img alt="Reviews Page Search Bar" src="documentation/features/reviews-search-bar.png">
-</details>
-<br>
-<hr>
 
 Reviews are also displayed underneath the search bar, which uses materialize card panel for design. These are blue to stay with the theme, and are the same design as the example reviews shown on the home page. 
 <br>
 The review panels display: Movie Title, Genre, Subtitle, Review, Rating and Username. This displays all details the user may want to know about a movie they want to know more about. 
 
-<details>
-<summary>Reviews Page - Review Cards</summary>
+![Reviews Page Review Cards](documentation/features/reviews-cards.png)
 <br>
-<img alt="Reviews Page Review Cards" src="documentation/features/reviews-cards.png">
-</details>
-<br>
-<hr>
 
 ### Create Review Page
 
 The create review page is a simple design which includes a submit form. The categories for the submit form are: Movie Title, Genre, Subtitle, Review and Rating. This allows the user to leave all necessary information to review a movie. The genre and rating options are both select menus that list different genres in the genre box, and numbers from 1 to 5 in the ratings section. Each category has corresponding icons to make the options more obvious to the users, as well as labels in each box to tell the user what is expected in each box. These include a movie reel for the movie title, a folder icon for the genre as its a category, a film clap board for the subtitle, a speech bubble for the review as this is the users main opinion box, and a star icon for the ratings box. These are all displayed in the same red as the buttons used across the website to stay with the theme. The submit button shows the text 'submit review' with a plus icon showing the user the review will be added to the already existing reviews. This submit box is also shown in red as the other buttons used on the reviews search bar reset button, login button, register button, and register button shown on home page.
 
-<details>
-<summary>Create Review Page</summary>
+![Create Review Page](documentation/features/create-review-page.png)
 <br>
-<img alt="Create Review Page" src="documentation/features/create-review-page.png">
-</details>
-<br>
-<hr>
 
 ### Edit Review Page
 
@@ -391,6 +356,72 @@ Responsiveness has been tested on Google Chrome, Safari and Firefox.
 Devtools on Google Chrome has been used to test across all devices to make sure all instances are responsive.
 
 ### **Functionality**
+
+<br>
+
+#### Manual Testing as a LOGGED OUT/ NON REGISTERED user:
+
+<br>
+
+Feature/ Test                                  | Expected Outcome                                                                       | Result          |
+| -------------------------------------------- | -------------------------------------------------------------------------------------- | --------------- |
+| Nav Bar Layout                               | Can only view login, register and logout in nav bar                                    | Pass            |
+| Nav Bar Logo                                 | Redirects to home page when clicked                                                    | Pass            |
+| Nav Bar Home Link                            | When clicked, redirects to home page                                                   | Pass            |
+| Nav Bar Login Link                           | When clicked, redirects to login page                                                  | Pass            |
+| Nav Bar Register Link                        | When clicked, redirects to register page                                               | Pass            |
+| Home page H1 and H2 headings                 | To be visible against background image                                                 | Pass            |
+| Home page register button                    | When clicked, redirects to register page                                               | Pass            |
+| Home page Example Reviews                    | 3 reviews are viewable from logged in reviews page                                     | Pass            |
+| Footer social media links                    | All icons when clicked redirect to corresponding social media websites                 | Pass            |
+| Login Page form                              | login form can be filled in with login details                                         | Pass            |
+| Login Page form labels                       | login form input boxes show labels to explain to user what is expected for input       | Pass            |
+| Login Page form required fields              | login form tells user boxes are required if not filled in correctly                    | Pass            |
+| Login Page correct details                   | If login details submitted match database entry, redirected to reviews page            | Pass            |
+| Login Page incorrect details                 | If login details submitted do not match database entry, flash message shows user information incorrect and redirected to login page to start process again                                        | Pass            |
+| Register Page form                           | register form can be filled in with registration details                               | Pass            |
+| Register Page form labels                    | Register form input boxes show labels to explain to user what is expected for input    | Pass            |
+| Register Page form required fields           | register form tells user boxes are required if not filled in correctly                 | Pass            |
+| Register Page correct details                | If registration details meet criteria and are unique, registration will be successful and user redirected to reviews page            | Pass            |
+| Register Page incorrect details              | If registration details submitted do not meet criteria, boxes show message saying required or show needed criteria                                        | Pass            |
+| Cannot search for logged in user urls        | if user that is not logged in searches for pages in url that are only available to logged in users, unauthorised page will show with redirect link to login page     | Pass            |
+
+<br>
+<hr>
+<br>
+
+#### Manual Testing as a LOGGED IN/ REGISTERED user:
+
+<br>
+
+Feature/ Test                                  | Expected Outcome                                                                             | Result          |
+| -------------------------------------------- | -------------------------------------------------------------------------------------------- | --------------- |
+| Nav Bar Layout                               | Can view home, create review, reviews and logout in nav bar. login and register now hidden   | Pass            |
+| Nav Bar Links                                | All links in navbar take user to corresponding pages                                         | Pass            |
+| Nav Bar Logo                                 | Redirects to home page when clicked                                                          | Pass            |
+| Reviews Page H1 and H2 heading               | Readable against background image                                                            | Pass            |
+| Reviews Search Bar                           | Allows user to enter movie title or genre                                                    | Pass            |
+| Reviews Search Bar label                     | Label shown to tell user to input genre or movie title                                       | Pass            |
+| Reviews Search Bar Search Button             | When clicked, searches for desired criteria                                                  | Pass            |
+| Reviews Search Bar Reset Button              | When clicked, redirects to reviews page again to refresh to original state                   | Pass            |
+| Reviews Review Cards                         | user can view review cards, see movie title, subtitle, review, rating and submitters username| Pass            |
+| Create Review Page form                      | create review form can be filled in with review details                                      | Pass            |
+| Create Review Page form select options       | when clicking genre or rating options, dropdown menus appear with options to click           | Pass            |
+| Create Review Page form required fields      | if not all inputs and options are filled, user is prompted to fill in to be able to submit   | Pass            |
+| Create Review Page form submit               | if all fields are filled in and meet criteria, on clicking submit, users review will be submitted to reviews page and user redirected to reviews page   | Pass            |
+| Edit Review redirect                    | Upon clicking edit button on reviews page's reviews cards, user is redirected to edit_review page      | Pass            |
+| Edit Review Page form labels                 | edit review form boxes show prior submitted information of review so user doesn't have to start again  | Pass            |
+| Edit Review Page form                        | edit review form can be filled in with amended review details                                          | Pass            |
+| Edit Review Page form select options         | when clicking genre or rating options, dropdown menus appear with options to click                     | Pass            |
+| Edit Review Page form required fields        | if a box has been emptied from original information and not refilled, user prompted to fill in information before submission allowed             | Pass            |
+| Edit Review Page form submit                 | if all fields are filled in and meet criteria, on clicking submit, users review changes will be submitted to reviews page and user redirected to reviews page   | Pass            |
+| Delete Review button                         | When delete button is clicked, review created by the user will be deleted from all reviews on reviews page. Redirected to reviews page      | Pass            |
+| User created reviews                         | Only reviews created by the currently logged in user can be edited and deleted by them                 | Pass            |
+| Admin permissions                            | On reviews page, admin can delete and edit all reviews, regardless of creator                          | Pass            |
+| Logout Nav Bar Link                          | When logout link clicked, user will be logged out of account and redirected to home page              | Pass            |
+| Footer social media links                    | All icons when clicked redirect to corresponding social media websites                 | Pass            |
+
+<br>
 
 ### **Validators**
 
