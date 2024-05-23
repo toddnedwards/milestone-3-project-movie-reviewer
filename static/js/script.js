@@ -1,6 +1,8 @@
 $(document).ready(function () {
   $(".sidenav").sidenav({edge: "right"});
   $("select").formSelect();
+  $('.modal').modal();
+  
 
   validateMaterializeSelect();
   function validateMaterializeSelect() {
@@ -30,6 +32,8 @@ $(document).ready(function () {
       });
   }
 });
+
+
 
 document.getElementById("year").innerHTML = new Date().getFullYear();
 
