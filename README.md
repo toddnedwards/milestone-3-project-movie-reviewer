@@ -590,9 +590,55 @@ Using google lighthouse, I check how my web application scored against performan
 
 ### **Testing User Stories**
 
+**User Story 1**: As a user I want the site to be easy to use<br>
+**Achieved?**: Yes. The site is a simple layout, with all main needs for links in the nav bar. Register button provided on home page also which is hidden once user is logged in to not cause confusion. No links are hidden through other page, but provided exactly when needed for the user. All form boxes are labelled.
+
+**User Story 2**: As a user I want be able create an account<br>
+**Achieved?**: Yes. The user clicks on register in either the nav bar, or on the register button provided in first view on the home page. Once clicked, a form is provided just requiring username and password. If the details are unique, the user clicks the submit button and is now a registered user.
+
+**User Story 3**: As a user I want to be able to log in<br>
+**Achieved?**: Yes. User simply clicks on the login link in the nav bar. once clicked they are redirected to the login page, where a form is provided. if their username and password details match an already registered account, they will be logged in and redirected to the reviews page.
+
+**User Story 4**: As a user I want to be able to read reviews<br>
+**Achieved?**: Yes. Once logged in, the user is redirected straight to the reviews page to also save confusion and the user being brought to this page. The reviews link is also displayed in the nav bar once the user is logged in.
+
+**User Story 5**: As a user I want to be able to search through reviews easily<br>
+**Achieved?**: Yes. A search bar is provided on the reviews page which allows the user to search for the categories movie title or genre. This will filter the results for them and show the desired criteria.
+
+**User Story 6**: As a user I want to be able to create a review<br>
+**Achieved?**: Yes. Once a user is logged in, they can click on create review in the nav bar. This will redirect the user to the create review page which is a form. The user can fill out the form and submit. Once submitted, the review will be added to the reviews page and the user will automatically be redirected back to the reviews page and be able to see their review added.
+
+**User Story 7**: As a user I want to be able to delete a review<br>
+**Achieved?**: Yes. Once a user has created a review, a button will be displayed on the review they have created titled 'edit'. The user clicks on the button and is redirected to the edit review page. The form will be prefilled with the information previously given for the review so the user can amend the information. If they are happy with the changes they have made, they click on 'submit changes'. Changes will be saved and the user will be redirected to the reviews page. If the user changes their mind about making amendments once they have clicked on edit, they can click the cancel button at the bottom of the form and will be redirected back to the reviews page without edits being made.
+
+**User Story 8**: As a user I want to be able to log out of my account<br>
+**Achieved?**: Yes. The user clicks on logout from the navbar menu, where they will be logged out from their account and redirected to the home page.
 
 
 ## **Bugs**
+
+During the development process, I found the following bugs:
+
+#### Unable to run the project via IDE
+
+I was unable to run my project via IDE. After trying to find a solution, I asked for support from code institute, which Sarah helped me solve. The problem was because of a typo in the coding for the mongo URI, once corrected app.py ran perfectly/
+
+#### .remove python command not working
+
+I was trying to get the .remove coding to work my delete review functionality. I tried in different ways such as .remove, .remove_one, .delete and .delete_one but the problem still persisted. In the end, thanks to the slack community, I found this forum page: [slack community .remove chat](https://app.slack.com/client/T0L30B202/search?recommended_build_version=1716411153&build_manifest_last_modified=1716414633) and the advice given by Thomas McQuillan, I found it was a problem with pymongo. I uninstalled pymongo and reinstalled pymongo as suggested but the problem still persisted. I tried different versions until I finally tried pymongo version 3.11. This worked perfectly, and i updated the requirements.txt accordingly. This fixed the problem and now all python functions work.
+
+#### Edit review information not being pulled from mongo DB
+
+I had an issue where the information I wanted to retrieve from a previous review was not being displayed. The problem was caused by a typo by adding an s to review, so when i was searching for 'for review in reviews' I was still searching outside the parameters rather than simply searching for 'review' in the results. After changing the typo, the information was retrieved.
+
+#### Select option on create review and edit review forms we're allowing user to submit form whilst no option was chosen
+
+On the create review and edit review forms, even after putting the required attribute in the tag, it was allowing the user to submit the form whilst leaving the select option boxes for genre and movie title blank. After trying several options like adding required="required" and changing disabled status in tags, the problem persisted. I went to back to the mini project example in code institute and restudied the select options videos and discovered it was a lack of coding in javascript for materialize that caused the issue. Once the code was added, the functionality ran perfectly.
+
+#### CSS code being ignored for background image sizing
+
+CSS was ignoring code that was added for background images, mainly for sizing. Materialize was causing issues and changing the size. Once I added !important to the attributes I wanted that weren't working, this fixed the issue and background images sized as we're instructed in style.css.
+
 
 ## **Deployment**
 
