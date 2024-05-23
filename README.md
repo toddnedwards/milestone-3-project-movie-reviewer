@@ -396,6 +396,57 @@ Devtools on Google Chrome has been used to test across all devices to make sure 
 
 #### HTML Validator
 
+HTML Validators all passed:
+
+<details>
+<summary>Home Page</summary>
+<br>
+<img alt="Home Page html validator result" src="documentation/html-validation/html-validation-index-page.png">
+</details>
+<br>
+<hr>
+
+<details>
+<summary>Login Page</summary>
+<br>
+<img alt="Login Page html validator result" src="documentation/html-validation/html-validation-login-page.png">
+</details>
+<br>
+<hr>
+
+<details>
+<summary>Register Page</summary>
+<br>
+<img alt="Register Page html validator result" src="documentation/html-validation/html-validation-register-page.png">
+</details>
+<br>
+<hr>
+
+<details>
+<summary>Reviews Page</summary>
+<br>
+<img alt="Reviews Page html validator result" src="documentation/html-validation/html-validation-reviews-page.png">
+</details>
+<br>
+<hr>
+
+<details>
+<summary>Create Review Page</summary>
+<br>
+<img alt="Create Review Page html validator result" src="documentation/html-validation/html-validation-create-review-page.png">
+</details>
+<br>
+<hr>
+
+<details>
+<summary>Edit Review Page</summary>
+<br>
+<img alt="Edit Review Page html validator result" src="documentation/html-validation/html-validation-edit-review-page.png">
+</details>
+<br>
+<hr>
+<br>
+
 #### CSS Validator
 
 
@@ -516,19 +567,40 @@ Using google lighthouse, I check how my web application scored against performan
 
 ## **Tech**
 
+The following languages we're used for my project:
 
+* HTML
+* CSS (Including Materialize CSS)
+* Python
+* Javascript
 
+Frameworks and tools used:
+
+* MongoDB
+* Flask
+* JQuery
+* Materialize
+* Font Awesome
+* Google Fonts
+<br>
 
 ## **Credits**
+<br>
 
 ### **Mentions**
 
+Special thanks to Martina Terlevic my mentor for her help and expert advice on perfecting my project and helping me some issues that I had. Also a special thanks to Sarah on code institute live support for helping with mongo db connection issues that I had.
+
 ### **Content**
+
+
 
 ### **Media**
 
-thanks to Sarah for helping with mongo db connection issues I had
+Background image was downloaded from [pexels.com](www.pexels.com). See the original link to the image used [here](https://www.pexels.com/photo/people-sitting-on-red-chairs-7991158/)
 
+<br>
 
+Favicon created at [Favicon.io](https://favicon.io/emoji-favicons/performing-arts)
 
-device mockup created with: https://techsini.com/multi-mockup/index.php
+device mockup created at [www.techsini.com](https://techsini.com/multi-mockup/index.php)
