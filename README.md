@@ -320,6 +320,13 @@ The edit review page has the same design as the create review page. This is beca
 ![Edit Review Page](documentation/features/edit-review-page.png)
 <br>
 
+### Unauthorised Page
+
+The unauthorised page has a very simple design, which consists of a heading and a link to redirect to the login page. This is used on pages that a user that is not logged in shouldn't be able to see, such as reviews page, create review and edit review. 
+
+![Unauthorised Page](documentation/features/unauthorised-page.png)
+<br>
+
 ### Logout Navigation Link
 
 When the user clicks on 'logout' provided in the navigation bar, the user is then logged out of their account and redirected back to the login page.
