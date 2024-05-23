@@ -1,6 +1,7 @@
-/*  */
+/* Google fonts import */
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
+/* main - for all pages */
 
 body {
     font-family: 'Oswald', sans-serif;
@@ -27,9 +28,29 @@ input {
     font-family: 'Oswald', sans-serif;
 }
 
+.social-icon {
+    font-size: 30px;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+.social-icon:hover {
+    color: red;
+    transition: 0.3s;
+}
+
+/* Navigation */
+
+.sidenav li>a {
+    color: white;
+    margin-top: 15px;
+}
+
 .dropdown-content li>a, .dropdown-content li>span {
     color: black;
 }
+
+/* Text */
 
 h1, h2, h3 {
     text-transform: capitalize;
@@ -39,12 +60,14 @@ h2 {
     font-size: 34px;
 }
 
-.index-heading {
-    padding-top: 50px;
+.text-shadow {
+    text-shadow: 8px 8px 5px rgba(0, 0, 0, 0.5);
 }
 
-label.form-label {
-    color: black;
+/* Index Page */
+
+.index-heading {
+    padding-top: 50px;
 }
 
 .index-p {
@@ -52,17 +75,30 @@ label.form-label {
     font-size: 25px;
 }
 
-.sidenav li>a {
-    color: white;
+.index-background-img {
+    position: relative;
+    filter: brightness(90%);
+    box-sizing: border-box!important;
+    max-width: 100%!important;
+    height: 500px!important;
+    background-image: url('/static/images/background-image-cropped.webp')!important;
+    background-repeat: no-repeat!important;
+    background-position: center!important;
+    background-size: cover!important;
+    background-color: #000000;
 }
 
-.text-shadow {
-    text-shadow: 8px 8px 5px rgba(0, 0, 0, 0.5);
+/* Forms (create review, edit review and reviews search bar) */
+
+.form {
+    margin: 0;
 }
 
-.card-shadow {
-    box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.5);
+label.form-label {
+    color: black;
 }
+
+/* Reviews Page */
 
 .reviews-heading {
     font-size: 30px;
@@ -84,15 +120,8 @@ label.form-label {
     font-size: 20px;
 }
 
-.social-icon {
-    font-size: 30px;
-    margin: 10px;
-    transition: 0.3s;
-}
-
-.social-icon:hover {
-    color: red;
-    transition: 0.3s;
+.card-shadow {
+    box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.5);
 }
 
 .reviews-background-img {
@@ -109,34 +138,13 @@ label.form-label {
     background-color: #000000;
 }
 
-.index-background-img {
-    position: relative;
-    filter: brightness(90%);
-    box-sizing: border-box!important;
-    max-width: 100%!important;
-    height: 500px!important;
-    background-image: url('/static/images/background-image-cropped.webp')!important;
-    background-repeat: no-repeat!important;
-    background-position: center!important;
-    background-size: cover!important;
-    background-color: #000000;
-}
-
 .reviews-heading-text {
     background-color: rgba(0, 0, 0, 0.7);
     margin-top: 30px;
 }
 
-.sidenav li>a {
-    margin-top: 15px;
-}
-
 .card.large {
-    height: 600px; /* Adjust this value to your desired height */
-}
-
-.form {
-    margin: 0;
+    height: 600px;
 }
 
 
@@ -179,6 +187,5 @@ label.form-label {
     h2 {
         font-size: 24px;
     }
-
 }
 
