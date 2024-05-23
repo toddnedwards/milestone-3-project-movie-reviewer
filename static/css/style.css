@@ -144,7 +144,11 @@ label.form-label {
 }
 
 .card.large {
-    height: 600px;
+    height: 680px;
+}
+
+.review-p {
+    height: 250px;
 }
 
 
@@ -175,6 +179,9 @@ label.form-label {
     .reviews-heading-text {
         margin-top:40px;
     }
+    .review-p {
+        height: 200px;
+    }
 }
 
 /* TABLET VERSION */
@@ -189,3 +196,33 @@ label.form-label {
     }
 }
 
+/* Smallest Screens */
+
+@media (min-width: 100px) and (max-width: 280px) {
+    
+    .search-text {
+        font-size: 10px!important;
+    }
+    h1 {
+        font-size: 25px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    h3 {
+        font-size: 18px;
+    }
+    h4 {
+        text-align: center;
+    }
+    p {
+        font-size: 10px;
+        margin-top: 0;
+    }
+    .review-p {
+        height: 250px;
+    }
+    .btn {
+    margin-top: 5px;
+    }
+}

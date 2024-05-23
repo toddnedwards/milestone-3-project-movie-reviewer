@@ -31,6 +31,9 @@ def index():
 def reviews():
     if 'user' not in session or not session['user']:
         return redirect(url_for('unauthorised'))
+
+    current_user_id = session.get("user_id")
+    
     reviews = mongo.db.reviews.find()
     return render_template("reviews.html", reviews=reviews)
 

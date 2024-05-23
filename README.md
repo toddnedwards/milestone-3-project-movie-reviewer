@@ -8,7 +8,7 @@
 
 ## **Site Overview**
 
-Movie Reviewers is an online application for movie fans and critiques to read post reviews of movies that they have watched to share with other people. Users can only see examples of the reviews until they login or register. Once logged in and registered, users can create, edit and delete their own reviews, as well search through reviews of other movies that they may have watched or want to watch and find an opinion on.
+Movie Reviewers is an online application for movie fans and critiques to read post reviews of movies that they have watched to share with other people. I am a movie lover and I like to find out what the best new movies are that I may not have seen and regularly use reviews by others to see if its something I might want to watch. I want to make a platform where others with the same love of movies can find out more exciting films to watch for themselves. I also wanted it to be a platform for people who would like to share their opinion and create a community where people who enjoy movies can share their different opinions. The idea to be able to give users not just a review section, but be able to tell people genres so they can save their time and search for categories that they may enjoy too. Users can only see examples of the reviews until they login or register. Once logged in and registered, users can create, edit and delete their own reviews, as well search through reviews of other movies that they may have watched or want to watch and find an opinion on.
 
 ## **Table of contents**
 
@@ -294,7 +294,7 @@ The register page has the same design as the login page, using the same layout a
 
 The reviews page features H1 heading and H2 subheading to tell the user they are on the reviews page and the intent of the page. These are displayed in the same background image as the index page. I tried different images, but I liked it remaining the same as the picture perfectly shows what the website is about. The text is also in its own box which has a darker transparency. This is to help the contrast of the text against the image and make it clearer for the user.
 <br>
-Underneath the heading, a search bar is displayed. This allows users to filter through the movies by movie title and genre to improve their experience and speed up their search of looking for movies. This includes a search button which is blue to stay with the theme of the review cards, and a red reset button which allows users to reset their search to show all results again. The choice of red also matches the flash message text, the social media hovered icons and is similar to the main colours of the background image. The search bar also includes the label 'Search By Movie Title Or Genre' so the user knows which parameters they can search within.
+Underneath the heading, a search bar is displayed. This allows users to filter through the movies by movie title and genre to improve their experience and speed up their search of looking for movies. This includes a search button which is blue to stay with the theme of the review cards, and a red reset button which allows users to reset their search to show all results again. The choice of red also matches the flash message text, the social media hovered icons and is similar to the main colours of the background image. The search bar also includes the label 'Search' so the user knows they can search for parameters within this space
 
 ![Reviews Page Search Bar](documentation/features/reviews-search-bar.png)
 <br>
@@ -317,15 +317,8 @@ The create review page is a simple design which includes a submit form. The cate
 
 The edit review page has the same design as the create review page. This is because its using the same information as before, but simply amending any information on the page that may need changing by the user. It has the same layout and options as the create review page. The only difference it displays is displaying the text that was from the already created review that needs editing, so the user can see what needs editing and can leave what doesn't need editing so they don't have to start again with all information. The only other change from the create page is that the submit button now shows the text 'submit changes'. Underneath the submit changes, there is a cancel button. The button is blue (matching style of search button and social media icons) titled 'cancel' which allows the user to cancel any changes to their amended review if they change their mind, and redirects them back to the get_reviews page.
 
-ADD IMAGE!!!!!!!!
-
-<!-- <details>
-<summary>Create Review Page</summary>
+![Edit Review Page](documentation/features/edit-review-page.png)
 <br>
-<img alt="Create Review Page" src="documentation/features/create-review-page.png">
-</details>
-<br>
-<hr> -->
 
 ### Logout Navigation Link
 
@@ -339,11 +332,10 @@ For future improvements to the website, I would like to consider adding:
 This would be easier for the admin of the site also to be less time consumed of having to fix these password changes for the user if they have to contact
 the admin.
 
-* Adding a modal to the delete review sections to ask the user if they are sure that they would like to delete their review. This would confirm their action and save
-any accidental or unnecessary deletions. This would be especially helpful as a precaution for the admin who has the option to delete any reviews that they want to.
-
 * Adding a link from each review to either a seperate page to read a larger review left by the user, or to give a link for each movie, pulling the movie title name and showing the users
 links to the corresponding movie on IMDB or rotten tomatoes to show further reviews and details. At the same time, this may be detrimental to the site in terms of traffic and keeping their users on the page by redirecting them to potentially competitive websites.
+
+* Creating a profile section for the user where they can see their details and their reviews that they have created in a seperate environment to the reviews page which includes all reviews by all users.
 
 ## **Testing**
 
