@@ -34,7 +34,7 @@ def reviews():
 
     current_user_id = session.get("user_id")
     
-    reviews = mongo.db.reviews.find()
+    reviews = mongo.db.reviews.find().sort("_id", -1)
     return render_template("reviews.html", reviews=reviews)
 
 
