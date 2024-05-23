@@ -642,6 +642,8 @@ CSS was ignoring code that was added for background images, mainly for sizing. M
 
 ## **Deployment**
 
+This project was deployed from Gitpod IDE to Heroku and the Pymongo database to Mongo DB.
+
 ## **Tech**
 
 The following languages we're used for my project:
@@ -662,7 +664,6 @@ Frameworks and tools used:
 <br>
 
 ## **Credits**
-<br>
 
 ### **Mentions**
 
@@ -670,14 +671,29 @@ Special thanks to Martina Terlevic my mentor for her help and expert advice on p
 
 ### **Content**
 
+<br>
+
+[Materialize documentation](https://materializecss.com/) for providing templates and css.
+
+[The slack community](https://app.slack.com/client/T0L30B202/C7JQY2RHC?recommended_build_version=1716411153&build_manifest_last_modified=1716414633) for issues with database connection and fixing the python .remove issue by downgrading to pymongo 3.11.
+
+[Stack Overflow](https://stackoverflow.com/) used for select tags required option formatting. 
+
+Also used for the google lighthouse advice that "Links do not have a discernible name". I followed their advice [here](https://stackoverflow.com/questions/51683761/how-to-fix-lighthouse-links-do-not-have-a-discernible-name) for adding an aria label which fixed the issue.
+
+[W3 Schools](https://www.w3schools.com/css/css_rwd_mediaqueries.asp) for media query sizing advice.
+
+[dev.to](https://dev.to/nehalahmadkhan/how-to-make-footer-stick-to-bottom-of-web-page-3i14) to fix footer not sticking to the bottom of page.
+
+[W3 Schools](https://www.w3schools.com/html/html_favicon.asp) for adding favicon to web application.
+
+device mockup created at [www.techsini.com](https://techsini.com/multi-mockup/index.php)
+
+Workflow diagram created at [canva.com](https://canva.com)
 
 
 ### **Media**
 
 Background image was downloaded from [pexels.com](www.pexels.com). See the original link to the image used [here](https://www.pexels.com/photo/people-sitting-on-red-chairs-7991158/)
 
-<br>
-
 Favicon created at [Favicon.io](https://favicon.io/emoji-favicons/performing-arts)
-
-device mockup created at [www.techsini.com](https://techsini.com/multi-mockup/index.php)
